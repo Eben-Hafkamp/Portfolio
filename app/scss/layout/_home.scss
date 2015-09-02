@@ -1,0 +1,118 @@
+#home {
+    display: flex;
+    flex-direction: column;
+    z-index: -2000;
+    background:-webkit-gradient(linear, left top, right bottom, color-stop(0%,#1e5799), color-stop(100%,#7db9e8));
+    
+    .container {
+        width: 9em;
+        position: relative;
+        margin:20em auto;
+    }
+
+    .move-logo {
+        position: absolute;
+        left: -1.8em;
+        top: -1.9em;
+    }
+
+    .logo-bar {
+        height: .18em;
+        width: 95px;
+        background-color: #fff;
+        z-index: 999;
+        transform: rotate(135deg);
+        animation: expand 1500ms;
+        transform-origin: 50% 50%;
+        margin: auto;
+    }
+    @keyframes expand {
+        0% {
+            width: 2px;
+          }
+        25% {
+            width: 2px;
+          }
+        30% {
+            width: 2px;
+            transform: rotate(90deg);
+        }
+        50% {
+            width: 100px;
+            transform: rotate(90deg);
+        }
+        100% {
+            width: 100px;
+            transform: rotate(135deg);
+        }
+    }
+
+    .eben {
+    //    outline: white 1px solid;
+        overflow: hidden;
+        display: inline-block;
+        margin-bottom: -.5em;
+    }
+    .hafkamp {
+    //    outline: white 1px solid;
+        vertical-align: -80%;
+        margin-top: -1em;
+        margin-left: 5.3em;
+        overflow: hidden;
+        display: inline-block;
+    }
+
+    .eben-text {
+        margin-left: 0em;
+        animation: eben-slide 2000ms;
+    }
+    .hafkamp-text {
+        margin-left: 0em;
+        animation: hafkamp-slide 2000ms;
+    }
+    @keyframes eben-slide {
+        0% {
+            margin-left: 4em;
+            opacity: 0;
+        }
+        60% {
+            margin-left: 4em;
+            opacity: 0;
+        }
+        70% {
+            opacity: 0;
+        }
+        100% {
+            left: 0;
+        }
+    }
+    @keyframes hafkamp-slide {
+        0% {
+            margin-left: -8em;
+            opacity: 0;
+        }
+        60% {
+            margin-left: -8em;
+            opacity: 0;
+        }
+        70% {
+            opacity: 0;
+        }
+        100% {
+            left: 0;
+        }
+    }  
+    
+}
+
+//.splash {
+//    display: flex;
+//    width: 100vw;
+//    height: 100vh;
+//    position: absolute;
+//    top: 0;
+//    left: 0;
+//    background-image: url(../../img/triangulation.png);
+//    background-size: cover;
+//    z-index: -1000;
+//}

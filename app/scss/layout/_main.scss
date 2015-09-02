@@ -1,0 +1,9 @@
+main {
+    display: flex;
+    flex-direction: column;
+    z-index: -2000;
+}
+
+#fullpage {z-index: -2000;}
+
+.fp-tableCell {z-index: -2000;}

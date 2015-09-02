@@ -1,0 +1,79 @@
+header {
+    display: flex;
+    position: fixed;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 7em;
+    width: 100vw;
+    background:#313140;
+    z-index: 100;
+
+    #bars{
+        height: 2.5em;
+        width: 2.5em;
+        margin: 2.25em 0 0 2.25em;
+        background-image: url('../../img/bars.png');
+        background-size: cover;
+        cursor: pointer;
+    }
+    
+    .cv {
+        height: 2.5em;
+        width: 2.5em;
+        margin: 2.25em 2.25em 0 0;
+        background-image: url(../../img/cv.png);
+        background-size: cover;
+        cursor: pointer;
+    }
+}
+
+.sidebar {
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        height: 18em;
+        position: fixed;
+        -webkit-transform: translateZ(0);
+        top: -11em;
+        left:0;
+        z-index: 50;
+        background: fade-out(white, .1);
+        
+        ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            height: auto;
+            
+            li {
+//                outline: black thin solid;
+                height: 10em;
+                width: 8em;
+                margin-top:2em;
+                border-bottom: thin fade-out(blue, .90) solid;
+                font-family: $font-stack;
+                line-height: 4em;
+                text-align: center;
+                font-size: 1.2em;
+                letter-spacing: 0.5em;
+                font-weight: bold;
+                color: #03A9F4;
+                &:hover {
+                    border-top: thick fade-out(white, 1) solid;
+                    background: fade-out(white, .9);
+                    color: $peach;
+                }
+//                img {outline:blue thin solid;}
+                span {cursor: pointer;}
+            }
+        }
+    }
+
+.logo {
+    flex: 0 0 2em;
+    width: 8em;
+    margin: 5em auto 3em auto;
+    background-image:url(../../img/logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
