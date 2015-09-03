@@ -1,8 +1,31 @@
-//#work {
-//    display: flex;
-//    flex-direction: column;
-//    height: 100%;
-//    position: absolute;
-//    top: 90vh;
-//    background: white;
-//}
+#work {
+    border: red thick solid;
+    display:flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    height: 100%;
+    padding: 10em 2em;
+//    background-color: whitesmoke;
+    
+    .fp-tableCell {display: flex;}
+    
+    .nis-block {
+        flex: 1 0 5em;
+        outline:red thin solid;
+//        display: inline-block;
+        height: 10em;
+//        width: 8em;
+        background: pink;
+       
+    }
+    .bbj-block {
+        outline:green thin solid;
+        flex: 1 0 5em;
+//        display: inline-block;
+        height: 10em;
+//        width: 8em;
+        background: blue;
+       
+    }
+}
+

@@ -1,16 +1,8 @@
-sourcemap = true
-
-require 'susy'
-require 'breakpoint'
-
-project_type = 'stand_alone'
-http_path = "/"
-sass_dir = "scss"
-css_dir = "css"
-images_dir = "img"
-fonts_dir = "fonts"
-javascript_dir = "js"
-line_comments = false
-preffered_syntax = :scss
-output_style = :compressed
+preferred_syntax = :sass
+http_path = '/'
+css_dir = 'app/css'
+sass_dir = 'app/scss'
+images_dir = 'assets/images'
+javascripts_dir = 'assets/javascripts'
 relative_assets = true
+line_comments = true

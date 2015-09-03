@@ -284,6 +284,48 @@ header .cv {
     left: 0;
   }
 }
+#work {
+  border: red thick solid;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  height: 100%;
+  padding: 10em 2em;
+}
+#work .fp-tableCell {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+#work .nis-block {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 5em;
+      -ms-flex: 1 0 5em;
+          flex: 1 0 5em;
+  outline: red thin solid;
+  height: 10em;
+  background: pink;
+}
+#work .bbj-block {
+  outline: green thin solid;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 5em;
+      -ms-flex: 1 0 5em;
+          flex: 1 0 5em;
+  height: 10em;
+  background: blue;
+}
+
 main {
   display: -webkit-box;
   display: -webkit-flex;

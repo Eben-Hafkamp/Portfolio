@@ -51,7 +51,7 @@ gulp.task('scripts', function() {
 
 
 gulp.task('compass', function() {
-    gulp.src('./app/scss/*.scss')
+    gulp.src('/app/scss/*.scss')
         .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
         .pipe(compass({
             css: 'app/css',
