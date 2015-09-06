@@ -2,19 +2,28 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="css/jquery.fullPage.css">
-    <link rel="stylesheet" href="css/style.css">     
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>    
-    <script src="js/jquery.easings.min.js"></script>
-    <script src="js/jquery.fullPage.min.js"></script>
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function() {
             $('#fullpage').fullpage({
-                css3: true
+                css3: true,
+                scrollingSpeed: 700,
+                autoScrolling: true,
+                fitToSection: true,
+                fitToSectionDelay: 1000,
+                scrollBar: false,
+                easing: 'easeInOutCubic',
+                easingcss3: 'ease',
+                scrollOverflow: false,
+                touchSensitivity: 15,
+                normalScrollElementTouchThreshold: 5
             });
         });
     </script>
     <meta charset="UTF-8">
-    <title>Gulp-Starter</title>
+    <title>EH | Portfolio</title>
 </head>
 <body>
     <header>
@@ -28,41 +37,59 @@
                 <li><img src="img/work.png" class="" height="85"><span>WORK<span></li>
                 <li><img src="img/calendar.png" class="" height="85"><span>AVAILABLE</span></li>
                 <li><img src="img/arroba.png" class="" height="85"><span>CONTACT</span></li>
-            </ul> 
+            </ul>
         </div>
     </nav>
     <main>
-        <div id="fullpage">      
+        <div id="fullpage">
             <div class="section" id="home">
-              <div class="container">
-                <div class="move-logo">
-                  <div class="eben">
-                    <div class="eben-text"><img src="img/eben.png"></div>
-                  </div>
-                  <div class="hafkamp">
-                    <div class="hafkamp-text"><img src="img/hafkamp.png"></div>
-                  </div>
-                 </div>
-                  <div class="logo-bar"></div>
-                </div>      
+                <div class="container">
+                    <div class="move-logo">
+                        <div class="eben">
+                            <div class="eben-text"><img src="img/eben.png" class="img"></div>
+                        </div>
+                        <div class="hafkamp">
+                            <div class="hafkamp-text"><img src="img/hafkamp.png"></div>
+                        </div>
+                    </div>
+                    <div class="logo-bar"></div>
+                </div>
+                <div class="mouse">
+                    <div class="mouse-wheel"></div>
+                </div>
                <div class="splash"></div>
             </div>
-            <div class="section" id="work">      
-               <div class="nis-block">
-                   
-               </div>
-               <div class="bbj-block">
-                   
-               </div>
+            <div class="section" id="work">
+                <div class="img-wrap1">
+                    <div id="block" class="nis-block">
+
+                    </div>
+                    <div id="block" class="bbj-block">
+
+                    </div>
+                    <div id="block" class="cyan-block">
+
+                    </div>
+                </div>
+                <div class="img-wrap2">
+                    <div id="block" class="rhino-block">
+
+                    </div>
+                    <div id="block" class="goldway-block">
+
+                    </div>
+                </div>
             </div>
-            <div class="section" id="section3">      
+            <div class="section" id="section3">
                <span>3</span>
             </div>
-            <div class="section" id="section4">      
+            <div class="section" id="section4">
                <span>4</span>
             </div>
         </div>
     </main>
 <script src="js/main.js"></script>
+<script src="js/jquery.easings.min.js"></script>
+<script src="js/jquery.fullPage.min.js"></script>
 </body>
 </html>

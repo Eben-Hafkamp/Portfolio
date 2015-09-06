@@ -132,14 +132,14 @@ header .cv {
   position: relative;
   margin: 20em auto;
 }
-#home .move-logo {
+#home .container .move-logo {
   position: absolute;
   left: -1.8em;
   top: -1.9em;
 }
-#home .logo-bar {
-  height: .18em;
-  width: 95px;
+#home .container .logo-bar {
+  height: .16em;
+  width: 5.8em;
   background-color: #fff;
   z-index: 999;
   -webkit-transform: rotate(135deg);
@@ -198,24 +198,24 @@ header .cv {
             transform: rotate(135deg);
   }
 }
-#home .eben {
+#home .container .eben {
   overflow: hidden;
   display: inline-block;
   margin-bottom: -.5em;
 }
-#home .hafkamp {
+#home .container .hafkamp {
   vertical-align: -80%;
   margin-top: -1em;
   margin-left: 5.3em;
   overflow: hidden;
   display: inline-block;
 }
-#home .eben-text {
+#home .container .eben-text {
   margin-left: 0em;
   -webkit-animation: eben-slide 2000ms;
           animation: eben-slide 2000ms;
 }
-#home .hafkamp-text {
+#home .container .hafkamp-text {
   margin-left: 0em;
   -webkit-animation: hafkamp-slide 2000ms;
           animation: hafkamp-slide 2000ms;
@@ -284,46 +284,178 @@ header .cv {
     left: 0;
   }
 }
+#home .mouse {
+  width: 2em;
+  height: 3em;
+  margin: 5em auto;
+  border: #e6e6e6 thin solid;
+  border-radius: 300px;
+  display: none;
+}
+#home .mouse-wheel {
+  width: .4em;
+  height: .5em;
+  margin: .5em auto;
+  background: #cdcdcd;
+  border-radius: 300px;
+  -webkit-animation: down 4000ms;
+          animation: down 4000ms;
+}
+@-webkit-keyframes down {
+  0% {
+    margin: .5em auto;
+  }
+  10% {
+    margin: .8em auto;
+  }
+  20% {
+    margin: .5em auto;
+  }
+  30% {
+    margin: .8em auto;
+  }
+  40% {
+    margin: .5em auto;
+  }
+  50% {
+    margin: .8em auto;
+  }
+  60% {
+    margin: .5em auto;
+  }
+  70% {
+    margin: .8em auto;
+  }
+  80% {
+    margin: .5em auto;
+  }
+  90% {
+    margin: .8em auto;
+  }
+  100% {
+    margin: .5em auto;
+  }
+}
+@keyframes down {
+  0% {
+    margin: .5em auto;
+  }
+  10% {
+    margin: .8em auto;
+  }
+  20% {
+    margin: .5em auto;
+  }
+  30% {
+    margin: .8em auto;
+  }
+  40% {
+    margin: .5em auto;
+  }
+  50% {
+    margin: .8em auto;
+  }
+  60% {
+    margin: .5em auto;
+  }
+  70% {
+    margin: .8em auto;
+  }
+  80% {
+    margin: .5em auto;
+  }
+  90% {
+    margin: .8em auto;
+  }
+  100% {
+    margin: .5em auto;
+  }
+}
+#home .show {
+  display: block;
+}
+
 #work {
-  border: red thick solid;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
   height: 100%;
-  padding: 10em 2em;
+  padding-top: 7em;
+  background: #7db9e8;
 }
 #work .fp-tableCell {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
-#work .nis-block {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1 0 5em;
-      -ms-flex: 1 0 5em;
-          flex: 1 0 5em;
-  outline: red thin solid;
-  height: 10em;
-  background: pink;
+#work .img-wrap1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  height: 60%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
-#work .bbj-block {
-  outline: green thin solid;
+#work .img-wrap1 .nis-block {
   -webkit-box-flex: 1;
-  -webkit-flex: 1 0 5em;
-      -ms-flex: 1 0 5em;
-          flex: 1 0 5em;
-  height: 10em;
-  background: blue;
+  -webkit-flex: 1 0 55%;
+      -ms-flex: 1 0 55%;
+          flex: 1 0 55%;
+  background-image: url(../../img/pink-bridge.jpg);
+  background-size: cover;
+}
+#work .img-wrap1 .bbj-block {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 45%;
+      -ms-flex: 1 0 45%;
+          flex: 1 0 45%;
+  background-image: url(../../img/black-tech.jpg);
+  background-size: cover;
+}
+#work .img-wrap1 .cyan-block {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 1em;
+      -ms-flex: 1 0 1em;
+          flex: 1 0 1em;
+  background-image: url(../../img/pink-sky.jpg);
+  background-size: cover;
+}
+#work .img-wrap1 .expand {
+  height: 50%;
+  width: 100%;
+}
+#work .img-wrap2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 40%;
+}
+#work .img-wrap2 .rhino-block {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 45%;
+      -ms-flex: 1 0 45%;
+          flex: 1 0 45%;
+  background-image: url(../../img/broken-xp.png);
+  background-size: cover;
+}
+#work .img-wrap2 .goldway-block {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 55%;
+      -ms-flex: 1 0 55%;
+          flex: 1 0 55%;
+  background-image: url(../../img/broken-xp.png);
+  background-size: cover;
 }
 
 main {
@@ -336,10 +468,6 @@ main {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
-  z-index: -2000;
-}
-
-#fullpage {
   z-index: -2000;
 }
 

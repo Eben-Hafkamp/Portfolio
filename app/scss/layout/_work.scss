@@ -1,31 +1,49 @@
 #work {
-    border: red thick solid;
-    display:flex;
-    flex-direction:row;
-    flex-wrap: wrap;
     height: 100%;
-    padding: 10em 2em;
-//    background-color: whitesmoke;
-    
-    .fp-tableCell {display: flex;}
-    
-    .nis-block {
-        flex: 1 0 5em;
-        outline:red thin solid;
-//        display: inline-block;
-        height: 10em;
-//        width: 8em;
-        background: pink;
-       
+    padding-top: 7em;
+    background: #7db9e8;
+
+    .fp-tableCell {display: flex; flex-direction: column;}
+
+    .img-wrap1 {
+        display: flex;
+        flex-wrap: wrap;
+       height: 60%;
+        flex-direction: column;
+
+        .nis-block {
+            flex: 1 0 55%;
+            background-image:url(../../img/pink-bridge.jpg);
+            background-size:cover;
+        }
+        .bbj-block {
+            flex: 1 0 45%;
+            background-image:url(../../img/black-tech.jpg);
+            background-size:cover;
+        }
+        .cyan-block {
+            flex: 1 0 1em;
+            // height: 10em;
+            background-image:url(../../img/pink-sky.jpg);
+            background-size:cover;
+        }
+        .expand {height:50%; width:100%;}
     }
-    .bbj-block {
-        outline:green thin solid;
-        flex: 1 0 5em;
-//        display: inline-block;
-        height: 10em;
-//        width: 8em;
-        background: blue;
-       
+
+    .img-wrap2 {
+        display: flex;
+        height: 40%;
+
+        .rhino-block {
+            flex: 1 0 45%;
+            background-image:url(../../img/broken-xp.png);
+            background-size:cover;
+        }
+        .goldway-block {
+            flex: 1 0 55%;
+            background-image:url(../../img/broken-xp.png);
+            background-size:cover;
+        }
+
     }
 }
-
