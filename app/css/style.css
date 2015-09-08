@@ -378,7 +378,7 @@ header .cv {
 #work {
   height: 100%;
   padding-top: 7em;
-  background: #7db9e8;
+  background: black;
 }
 #work .fp-tableCell {
   display: -webkit-box;
@@ -391,70 +391,65 @@ header .cv {
       -ms-flex-direction: column;
           flex-direction: column;
 }
-#work .img-wrap1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
-  height: 60%;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
+#work .slick-center .slide-h3 {
+  color: #FFF;
 }
-#work .img-wrap1 .nis-block {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1 0 55%;
-      -ms-flex: 1 0 55%;
-          flex: 1 0 55%;
-  background-image: url(../../img/pink-bridge.jpg);
+#work .slick-center .slide-h3:focus {
+  outline: 0;
+  outline: none;
+  border: 0;
+  border: none;
+}
+#work .slider-nav {
+  width: 45em;
+  line-height: 0;
+  margin: 0 auto 2em;
+  padding: 0 5em;
+  text-align: center;
+}
+#work .slider-nav:focus {
+  outline: 0;
+  outline: none;
+  border: 0;
+  border: none;
+}
+#work .slide-h3 {
+  margin: 5em auto;
+  padding: 3em;
+  background: rgba(255, 255, 255, 0.3);
+}
+#work .slider-nav div {
+  margin-right: 5px;
+}
+#work .slick-slide {
+  opacity: .1;
+}
+#work .slick-slide:focus {
+  outline: 0;
+}
+#work .slick-center {
+  display: block;
+  max-width: 10% !important;
+  max-height: 20% !important;
+  opacity: 1;
+}
+#work .slick-next {
+  background: url(../../img/arrow-right-thin.png);
   background-size: cover;
 }
-#work .img-wrap1 .bbj-block {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1 0 45%;
-      -ms-flex: 1 0 45%;
-          flex: 1 0 45%;
-  background-image: url(../../img/black-tech.jpg);
+#work .slick-prev {
+  background: url(../../img/arrow-left-thin.png);
   background-size: cover;
 }
-#work .img-wrap1 .cyan-block {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1 0 1em;
-      -ms-flex: 1 0 1em;
-          flex: 1 0 1em;
-  background-image: url(../../img/pink-sky.jpg);
-  background-size: cover;
+#work .slider-for {
+  width: 98vw;
+  height: 35em;
+  margin: auto;
 }
-#work .img-wrap1 .expand {
-  height: 50%;
-  width: 100%;
-}
-#work .img-wrap2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: 40%;
-}
-#work .img-wrap2 .rhino-block {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1 0 45%;
-      -ms-flex: 1 0 45%;
-          flex: 1 0 45%;
-  background-image: url(../../img/broken-xp.png);
-  background-size: cover;
-}
-#work .img-wrap2 .goldway-block {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1 0 55%;
-      -ms-flex: 1 0 55%;
-          flex: 1 0 55%;
-  background-image: url(../../img/broken-xp.png);
+#work .slider-for .goldway {
+  height: 35em;
+  width: 98vw;
+  background-image: url(../../img/goldway.png);
   background-size: cover;
 }
 

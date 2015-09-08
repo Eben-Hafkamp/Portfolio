@@ -3,24 +3,12 @@
 <head>
     <link rel="stylesheet" href="css/jquery.fullPage.css">
     <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="slickDir/slick/slick.css">
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css" rel="stylesheet"/> -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="slickDir/slick/slick-theme.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script type="text/javascript">
-        $(document).ready(function() {
-            $('#fullpage').fullpage({
-                css3: true,
-                scrollingSpeed: 700,
-                autoScrolling: true,
-                fitToSection: true,
-                fitToSectionDelay: 1000,
-                scrollBar: false,
-                easing: 'easeInOutCubic',
-                easingcss3: 'ease',
-                scrollOverflow: false,
-                touchSensitivity: 15,
-                normalScrollElementTouchThreshold: 5
-            });
-        });
     </script>
     <meta charset="UTF-8">
     <title>EH | Portfolio</title>
@@ -60,25 +48,28 @@
                <div class="splash"></div>
             </div>
             <div class="section" id="work">
-                <div class="img-wrap1">
-                    <div id="block" class="nis-block">
 
-                    </div>
-                    <div id="block" class="bbj-block">
+              <section id="slick-content">
 
-                    </div>
-                    <div id="block" class="cyan-block">
+              <div class="slider-nav">
+                <div><div class="slide-h3">1</div></div>
+                <div><div class="slide-h3">2</div></div>
+                <div><div class="slide-h3">3</div></div>
+                <div><div class="slide-h3">4</div></div>
+                <div><div class="slide-h3">5</div></div>
+                <div><div class="slide-h3">6</div></div>
+              </div>
+              <div class="slider-for">
+                <div class="goldway"></div>
+                <div><div class="slide-h3">2</div></div>
+                <div><div class="slide-h3">3</div></div>
+                <div><div class="slide-h3">4</div></div>
+                <div><div class="slide-h3">5</div></div>
+                <div><div class="slide-h3">6</div></div>
+              </div>
+                <!-- <div class="slider slider-nav"> -->
 
-                    </div>
-                </div>
-                <div class="img-wrap2">
-                    <div id="block" class="rhino-block">
-
-                    </div>
-                    <div id="block" class="goldway-block">
-
-                    </div>
-                </div>
+                <!-- </div> -->
             </div>
             <div class="section" id="section3">
                <span>3</span>
@@ -89,6 +80,7 @@
         </div>
     </main>
 <script src="js/main.js"></script>
+<script src="slickDir/slick/slick.min.js"></script>
 <script src="js/jquery.easings.min.js"></script>
 <script src="js/jquery.fullPage.min.js"></script>
 </body>

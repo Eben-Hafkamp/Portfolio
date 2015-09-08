@@ -1,49 +1,67 @@
 #work {
-    height: 100%;
-    padding-top: 7em;
-    background: #7db9e8;
+  height: 100%;
+  padding-top: 7em;
+  background: black;
 
-    .fp-tableCell {display: flex; flex-direction: column;}
+  .fp-tableCell {display: flex; flex-direction: column;}
 
-    .img-wrap1 {
-        display: flex;
-        flex-wrap: wrap;
-       height: 60%;
-        flex-direction: column;
-
-        .nis-block {
-            flex: 1 0 55%;
-            background-image:url(../../img/pink-bridge.jpg);
-            background-size:cover;
-        }
-        .bbj-block {
-            flex: 1 0 45%;
-            background-image:url(../../img/black-tech.jpg);
-            background-size:cover;
-        }
-        .cyan-block {
-            flex: 1 0 1em;
-            // height: 10em;
-            background-image:url(../../img/pink-sky.jpg);
-            background-size:cover;
-        }
-        .expand {height:50%; width:100%;}
+  .slick-center .slide-h3{
+    color: #FFF;
+    &:focus {
+      outline:0;
+      outline: none;
+      border:0;
+      border:none;
     }
-
-    .img-wrap2 {
-        display: flex;
-        height: 40%;
-
-        .rhino-block {
-            flex: 1 0 45%;
-            background-image:url(../../img/broken-xp.png);
-            background-size:cover;
-        }
-        .goldway-block {
-            flex: 1 0 55%;
-            background-image:url(../../img/broken-xp.png);
-            background-size:cover;
-        }
-
+  }
+  .slider-nav{
+    width: 45em;
+    line-height: 0;
+    margin: 0 auto 2em;
+    padding: 0 5em;
+    text-align: center;
+    &:focus {
+      outline:0;
+      outline: none;
+      border:0;
+      border:none;
     }
+  }
+
+  .slide-h3{
+    margin: 5em auto;
+    padding: 3em;
+    background: fade-out(#FFF, .7);
+  }
+  .slider-nav div{
+    margin-right: 5px;
+  }
+  .slick-slide{
+    opacity: .1;
+    &:focus {
+      outline:0;
+    }
+  }
+  .slick-center{
+    display: block;
+    max-width: 10% !important;
+    max-height:20% !important;
+    opacity: 1;
+  }
+  .slick-next {
+    background: url(../../img/arrow-right-thin.png);
+    background-size: cover;
+  }
+  .slick-prev {
+    background: url(../../img/arrow-left-thin.png);
+    background-size: cover;
+  }
+
+  .slider-for {
+    width:98vw;
+    height:35em;
+    margin:auto;
+
+    .goldway {height:35em; width:98vw; background-image:url(../../img/goldway.png); background-size:cover;}
+  }
 }
