@@ -1,11 +1,11 @@
 #work {
   height: 100%;
   padding-top: 7em;
-  background: black;
+  background:-webkit-gradient(linear, left top, right bottom, color-stop(0%,#1e5799), color-stop(100%,#7db9e8));
 
   .fp-tableCell {display: flex; flex-direction: column;}
 
-  .slick-center .slide-h3{
+  .slick-center .slide-logo{
     color: #FFF;
     &:focus {
       outline:0;
@@ -15,10 +15,10 @@
     }
   }
   .slider-nav{
-    width: 45em;
-    line-height: 0;
-    margin: 0 auto 2em;
-    padding: 0 5em;
+    width: 40em;
+    line-height: 0em;
+    margin: -1em auto 2em;
+    padding: 0 2em;
     text-align: center;
     &:focus {
       outline:0;
@@ -26,18 +26,20 @@
       border:0;
       border:none;
     }
+    .slide-logo{
+      margin: 5em auto;
+      padding: 3em;
+      background: fade-out(#FFF, .9);
+      img {margin: auto;}
+    }
   }
 
-  .slide-h3{
-    margin: 5em auto;
-    padding: 3em;
-    background: fade-out(#FFF, .7);
-  }
+
   .slider-nav div{
-    margin-right: 5px;
+    margin-right: .7em;
   }
   .slick-slide{
-    opacity: .1;
+    opacity: .2;
     &:focus {
       outline:0;
     }
@@ -48,20 +50,56 @@
     max-height:20% !important;
     opacity: 1;
   }
+
   .slick-next {
-    background: url(../../img/arrow-right-thin.png);
+    // background: url(../../img/arrow-right-thin.png);
     background-size: cover;
   }
   .slick-prev {
-    background: url(../../img/arrow-left-thin.png);
+    // background: url(../../img/arrow-left-thin.png);
     background-size: cover;
   }
 
   .slider-for {
     width:98vw;
+    max-width: 75em;
     height:35em;
-    margin:auto;
-
-    .goldway {height:35em; width:98vw; background-image:url(../../img/goldway.png); background-size:cover;}
+    margin: auto;
+    text-align: center;
+    .contain-1 {
+      padding-bottom:1em;
+      h1 {
+        margin:0 auto 1em;
+        font-size:3.5em;
+        font-family:$font-stack;
+        color: white;
+      }
+      .goldway {
+        margin: auto;
+        height:37em;
+        width:98vw;
+        position: relative;
+        background-image:url(../../img/goldway.png);
+        background-size:cover;
+        background-position: 50% 0%;
+      }
+      p {
+        margin-bottom: 1.5em;
+        padding:2em 4em;
+        font-family:$font-stack;
+        font-size: 2em;
+        letter-spacing: .1em;
+        line-height: 1.6em;
+        color: white;
+      }
+      span {
+        padding: .5em;
+        font-family:$font-stack;
+        font-size: 1.8em;
+        letter-spacing: .1em;
+        line-height: 1.5em;
+        color: white;
+      }
+    }
   }
 }
