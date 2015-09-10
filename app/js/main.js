@@ -1,5 +1,7 @@
 $(function() {
 
+// ---------------- FULL PAGE
+
     $('#fullpage').fullpage({
         css3: true,
         scrollingSpeed: 700,
@@ -14,49 +16,39 @@ $(function() {
         normalScrollElementTouchThreshold: 5
     });
 
+// ---------------- BURGER
+
     var isOpen = false;
-    $('#bars').on('click', function() {
+    $('#click').on('click', function() {
         if(isOpen == true) {
-            $('.sidebar').animate({top: '-11em'}, 600, function() {})
+            $('.sidebar').addClass('animated fadeOut');
+            $('.sidebar').one('animationend', function() {
+              $(this).removeClass('animated fadeOut').addClass('hide');
+            });
             isOpen = false;
         } else {
-             $('.sidebar').animate({top: '7em'}, 300, function() {})
-             isOpen = true;
+            $('.sidebar').removeClass('hide');
+            $('.sidebar').addClass('animated fadeIn');
+            $('.sidebar').one('animationend', function() {
+              $(this).removeClass('animated fadeIn')
+            });
+            isOpen = true;
         };
     });
 
+// ---------------- SLICK CAROUSEL
 
     $('.slider-nav').slick({
       centerMode: true,
-      centerPadding: '60px',
+      centerPadding: '10em',
       slidesToShow: 1,
       slidesToScroll: 1,
       asNavFor: '.slider-for',
-      dots: true,
+      // dots: true,
       centerMode: true,
       focusOnSelect: true,
       // speed:100,
       // index: 2,
-      responsive: [
-        {
-          breakpoint: 768,
-          settings: {
-            arrows: false,
-            centerMode: true,
-            centerPadding: '40px',
-            slidesToShow: 1
-          }
-        },
-        {
-          breakpoint: 480,
-          settings: {
-            arrows: false,
-            centerMode: true,
-            centerPadding: '40px',
-            slidesToShow: 1
-          }
-        }
-      ]
     });
     $('.slider-for').slick({
       slidesToShow: 1,
@@ -66,10 +58,20 @@ $(function() {
       asNavFor: '.slider-nav'
     });
 
+// ---------------- MOUSE SCROLL KEYFRAMES INTRO
+
     setTimeout(function(){
         $('.mouse').addClass('show').addClass('animated fadeIn');
     }, 2000);
     setTimeout(function(){
         $('.mouse').addClass('animated fadeOut');
     }, 6000);
+
+// ---------------- FIXED NAVIGATION BAR INTRO
+
+setTimeout(function(){
+    $('.in').addClass('show').addClass('animated fadeIn');
+}, 2000);
+
+
 });

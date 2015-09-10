@@ -15,7 +15,7 @@
     }
   }
   .slider-nav{
-    width: 40em;
+    width: 50em;
     line-height: 0em;
     margin: -1em auto 2em;
     padding: 0 2em;
@@ -28,7 +28,7 @@
     }
     .slide-logo{
       margin: 5em auto;
-      padding: 3em;
+      padding: 1.5em;
       background: fade-out(#FFF, .9);
       img {margin: auto;}
     }
@@ -66,31 +66,29 @@
     height:35em;
     margin: auto;
     text-align: center;
+
+    h1 {
+      margin:0 auto 1em;
+      font-size:3.5em;
+      font-family:$font-stack;
+      color: white;
+    }
+    p {
+      margin-bottom: 1.5em;
+      padding:2em 4em;
+      font-family:$font-stack;
+      font-size: 2em;
+      letter-spacing: .1em;
+      line-height: 1.6em;
+      color: white;
+    }
+
     .contain-1 {
       padding-bottom:1em;
-      h1 {
-        margin:0 auto 1em;
-        font-size:3.5em;
-        font-family:$font-stack;
-        color: white;
-      }
+
       .goldway {
-        margin: auto;
-        height:37em;
-        width:98vw;
-        position: relative;
+        @include fade-img;
         background-image:url(../../img/goldway.png);
-        background-size:cover;
-        background-position: 50% 0%;
-      }
-      p {
-        margin-bottom: 1.5em;
-        padding:2em 4em;
-        font-family:$font-stack;
-        font-size: 2em;
-        letter-spacing: .1em;
-        line-height: 1.6em;
-        color: white;
       }
       span {
         padding: .5em;
@@ -99,6 +97,24 @@
         letter-spacing: .1em;
         line-height: 1.5em;
         color: white;
+      }
+    }
+    .contain-3 {
+      .nis {
+        @include fade-img;
+        background-image:url(../../img/nis2.png);
+      }
+    }
+    .contain-4 {
+      .bbj {
+        @include fade-img;
+        background-image:url(../../img/bb22j.png);
+      }
+    }
+    .contain-6 {
+      .rhino {
+        @include fade-img;
+        background-image:url(../../img/rhino.png);
       }
     }
   }
