@@ -725,6 +725,9 @@ header .cv {
   padding-top: 7em;
   background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #1e5799), color-stop(100%, #7db9e8));
 }
+#work h1 {
+  margin: .5em auto 1.5em;
+}
 #work .fp-tableCell {
   display: -webkit-box;
   display: -webkit-flex;
@@ -748,8 +751,8 @@ header .cv {
 #work .slider-nav {
   width: 50em;
   line-height: 0em;
-  margin: -1em auto 2em;
-  padding: 0 2em;
+  margin: -2em auto;
+  padding: 0 1em;
   text-align: center;
 }
 #work .slider-nav:focus {
@@ -778,7 +781,7 @@ header .cv {
 #work .slick-center {
   display: block;
   max-width: 10% !important;
-  max-height: 20% !important;
+  max-height: 10% !important;
   opacity: 1;
 }
 #work .slick-next {
@@ -793,21 +796,6 @@ header .cv {
   height: 35em;
   margin: auto;
   text-align: center;
-}
-#work .slider-for h1 {
-  margin: 0 auto 1em;
-  font-size: 3.5em;
-  font-family: Helvetica, Century Gothic, Arial;
-  color: white;
-}
-#work .slider-for p {
-  margin-bottom: 1.5em;
-  padding: 2em 4em;
-  font-family: Helvetica, Century Gothic, Arial;
-  font-size: 2em;
-  letter-spacing: .1em;
-  line-height: 1.6em;
-  color: white;
 }
 #work .slider-for .contain-1 {
   padding-bottom: 1em;
@@ -828,6 +816,15 @@ header .cv {
   letter-spacing: .1em;
   line-height: 1.5em;
   color: white;
+}
+#work .slider-for .contain-2 .cyanfox {
+  margin: auto;
+  height: 37em;
+  width: 98vw;
+  position: relative;
+  background-size: cover;
+  background-position: 50% 0%;
+  background-image: url(../../img/cyanfox1.png);
 }
 #work .slider-for .contain-3 .nis {
   margin: auto;
@@ -856,6 +853,140 @@ header .cv {
   background-position: 50% 0%;
   background-image: url(../../img/rhino.png);
 }
+#work .dots {
+  width: 100%;
+  height: 3em;
+  position: absolute;
+  top: 65em;
+}
+#work .dots img {
+  margin: auto;
+}
+
+.fp-tableCell {
+  vertical-align: top;
+}
+
+#contact {
+  background: pink;
+  text-align: center;
+}
+#contact h1 {
+  margin: 3.5em auto 0;
+}
+#contact p {
+  padding: 1em 0;
+}
+#contact .contact-form {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 90vw;
+  margin: 2em auto;
+  overflow: hidden;
+  background: white;
+  border-radius: 5px;
+}
+#contact .message, #contact .contact, #contact .name, #contact .form-footer, #contact .form-header, #contact textarea {
+  clear: both;
+  overflow: hidden;
+}
+#contact .name {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+#contact .name .first, #contact .name .last {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 1em;
+      -ms-flex: 1 0 1em;
+          flex: 1 0 1em;
+  height: 2.5em;
+  text-indent: 1em;
+  border: thin solid rgba(0, 0, 0, 0.1);
+  font-size: 1.7em;
+}
+#contact .contact {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+#contact .contact .email {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 1em;
+      -ms-flex: 1 0 1em;
+          flex: 1 0 1em;
+  height: 2.5em;
+  text-indent: 1em;
+  line-height: 50px;
+  border-top: 0;
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: 1.7em;
+}
+#contact .message {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+#contact .message textarea {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 1em;
+      -ms-flex: 1 0 1em;
+          flex: 1 0 1em;
+  height: 10em;
+  text-indent: 1em;
+  line-height: 50px;
+  font-size: 1.7em;
+  border-top: 0;
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+#contact .form-footer {
+  background: rgba(0, 0, 0, 0.05);
+  line-height: 75px;
+  height: 5em;
+  border-top: 1px dashed rgba(0, 0, 0, 0.3);
+  border-radius: 0 0 5px 5px;
+  padding-left: 0;
+  padding-right: 20px;
+}
+#contact .form-footer button {
+  width: 9em;
+  height: 3em;
+  background: #e74c3c;
+  border-radius: 5px;
+  border: 0;
+  margin: 1em;
+  color: white;
+  float: right;
+  border-bottom: 3px solid #c0392b;
+  -webkit-transition: all linear .2s;
+          transition: all linear .2s;
+  font-size: 1em;
+}
+#contact .form-footer button:hover {
+  background: #c0392b;
+}
+#contact .form-footer button:focus {
+  outline: none;
+}
+#contact .first:focus, #contact .last:focus, #contact .email:focus, #contact textarea:focus {
+  outline: none;
+  background: rgba(52, 152, 219, 0.1);
+  color: rgba(51, 51, 51, 0.7);
+}
 
 main {
   display: -webkit-box;
@@ -872,4 +1003,20 @@ main {
 
 .fp-tableCell {
   z-index: -2000;
+}
+
+h1 {
+  font-size: 3.5em;
+  font-family: Helvetica, Century Gothic, Arial;
+  color: white;
+}
+
+p {
+  margin-bottom: 1.5em;
+  padding: 2em 4em;
+  font-family: Helvetica, Century Gothic, Arial;
+  font-size: 2em;
+  letter-spacing: .1em;
+  line-height: 1.6em;
+  color: white;
 }
