@@ -1,0 +1,75 @@
+#skills {
+  background: -webkit-radial-gradient(center, ellipse cover, rgba(71,71,71,1) 0%, rgba(28,28,28,1) 100%);
+  text-align: center;
+  padding-top: 11em;
+
+  .skills-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .tools-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  p {margin-bottom: .5em;}
+
+  span {
+    flex: 1 0 25%;
+    color: white;
+    font-size: 2em;
+    font-family: $font-stack;
+  }
+
+  img {
+    margin: 3em 0 2em;
+  }
+
+  #Animation-front{
+  width:15em;
+  height: 2em;
+  margin: 4em auto;
+  font: normal 40px/50px 'Raleway', sans-serif;
+  color: #999;
+
+
+    b {
+      overflow: hidden;
+      position: relative;
+      height: 1.4em;
+      line-height: 1.7em;
+      float: left;
+    }
+    span{
+      height: 50px;
+      float: left;
+      white-space: nowrap;
+      position: relative;
+      font-size: 85px;
+    }
+    .moving-text {
+      display: inline-block;
+      color: #e74c3c;
+      position: relative;
+      white-space: nowrap;
+      animation: move 6s;
+      animation-iteration-count: infinite;
+      font-size: 65px;
+      letter-spacing: 2px;
+    }
+    @keyframes move {
+      0%  { top: -10px; }
+      20% { top: -70px; }
+      40% { top: -140px; }
+      60% { top: -210px; }
+      60% { top: -210px; }
+      80% { top: -10px;}
+      80% { top: -10px;}
+    }
+  }
+
+
+}

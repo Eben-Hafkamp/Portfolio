@@ -27,12 +27,19 @@
     <nav>
         <div class="sidebar hide">
             <ul>
-                <li><img src="img/about.png" class="" height="85"><span>ABOUT</span></li>
                 <li><img src="img/work.png" class="" height="85"><span>WORK<span></li>
+                <li><img src="img/about.png" class="" height="85"><span>SKILLS</span></li>
                 <li><img src="img/calendar.png" class="" height="85"><span>AVAILABLE</span></li>
                 <li><img src="img/arroba.png" class="" height="85"><span>CONTACT</span></li>
             </ul>
         </div>
+        <!-- <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+          <defs>
+            <filter id="blur">
+              <feGaussianBlur in="SourceGraphic" stdDeviation="3" />
+            </filter>
+          </defs>
+        </svg> -->
     </nav>
     <main>
         <div id="fullpage">
@@ -58,12 +65,12 @@
               <section id="slick-content">
 
               <div class="slider-nav">
-                <div><div class="slide-logo"><img src="img/goldway-logo.png" alt=""></div></div>
-                <div><div class="slide-logo"><img src="img/cyanfox-logo2.png" height="52" alt=""></div></div>
-                <div><div class="slide-logo"><img src="img/nis-logo3.png" height="52" alt=""></div></div>
-                <div><div class="slide-logo"><img src="img/bbj-logo.png" height="52" alt=""></div></div>
+                <div><div class="slide-logo"><img src="img/goldway-logo.png" height="40"></div></div>
+                <div><div class="slide-logo"><img src="img/cyanfox-logo2.png" height="40"></div></div>
+                <div><div class="slide-logo"><img src="img/nis-logo3.png" height="40"></div></div>
+                <div><div class="slide-logo"><img src="img/bbj-logo.png" height="40"></div></div>
                 <!-- <div><div class="slide-logo">5</div></div> -->
-                <div><div class="slide-logo"><img src="img/rhino-logo.jpg" height="52" alt=""></div></div>
+                <div><div class="slide-logo"><img src="img/rhino-logo.jpg" height="40"></div></div>
               </div>
               <div class="slider-for">
                 <div class="contain-1">
@@ -107,8 +114,41 @@
 
                 <!-- </div> -->
             </div>
-            <div class="section" id="section3">
-               <span>3</span>
+            <div class="section" id="skills">
+              <h1>About Me</h1>
+               <p>Some of my core skills include:</p>
+               <div class="skills-wrapper">
+                  <span>HTML</span>
+                  <span>Sass</span>
+                  <span>jQuery</span>
+                  <span>PHP SQL</span>
+                  <img src="img/icon-html.png" height="110">
+                  <img src="img/icon-sass.png" height="110">
+                  <img src="img/icon-jquery.png" height="110">
+                  <img src="img/icon-php.png" height="110">
+               </div>
+               <p>I can use the following tools and frameworks:</p>
+               <div class="tools-wrapper">
+                 <span>GitHub</span>
+                 <span>Gulp</span>
+                 <span>Laravel</span>
+                 <span>Adobe</span>
+                 <img src="img/icon-git.png" height="110">
+                 <img src="img/icon-gulp.png" height="110">
+                 <img src="img/icon-laravel.png" height="110">
+                 <img src="img/icon-adobe.png" height="110">
+               </div>
+               <div id="Animation-front">
+                <span>I'm a</span>
+                <b>
+                 <span class="moving-text">
+                  &nbsp; lover of code<br />
+                  &nbsp; music natzi<br />
+                  &nbsp; pepperoni fan <br />
+                  &nbsp; sassquatch
+                 </span>
+                </b>
+              </div>
             </div>
             <div class="section" id="contact">
                <h1>Contact</h1>
@@ -122,7 +162,7 @@
                     <input class='email' placeholder='E-mail Address' type='text'>
                   </div>
                   <div class='message'>
-                    <textarea placeholder='Your Suggestions Here!'></textarea>
+                    <textarea id="contact-textarea" placeholder='Your Suggestions Here!'></textarea>
                   </div>
                   <div class="form-footer">
                     <button>Send</button>

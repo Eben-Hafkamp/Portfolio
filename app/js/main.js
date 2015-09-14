@@ -1,6 +1,6 @@
 $(function() {
 
-// ---------------- FULL PAGE
+// ---------------- FULL PAGE SCROLL
 
     $('#fullpage').fullpage({
         css3: true,
@@ -16,7 +16,7 @@ $(function() {
         normalScrollElementTouchThreshold: 5
     });
 
-// ---------------- BURGER
+// ---------------- BURGER NAVIGATION MOBILE PHONE
 
     var isOpen = false;
     $('#click').on('click', function() {
@@ -41,14 +41,13 @@ $(function() {
     $('.slider-nav').slick({
       centerMode: true,
       centerPadding: '10em',
-      slidesToShow: 1,
+      slidesToShow: 3,
       slidesToScroll: 1,
       asNavFor: '.slider-for',
-      // dots: true,
       centerMode: true,
       focusOnSelect: true,
-      // speed:100,
-      // index: 2,
+      speed:250,
+      index: 2,
     });
     $('.slider-for').slick({
       slidesToShow: 1,
@@ -60,18 +59,29 @@ $(function() {
 
 // ---------------- MOUSE SCROLL KEYFRAMES INTRO
 
-    setTimeout(function(){
-        $('.mouse').addClass('show').addClass('animated fadeIn');
-    }, 2000);
-    setTimeout(function(){
-        $('.mouse').addClass('animated fadeOut');
-    }, 6000);
+    // setTimeout(function(){
+    //     $('.mouse').addClass('show').addClass('animated fadeIn');
+    // }, 2000);
+    // setTimeout(function(){
+    //     $('.mouse').addClass('animated fadeOut');
+    // }, 6000);
 
-// ---------------- FIXED NAVIGATION BAR INTRO
+// ---------------- FIXED NAVIGATION BAR MOBILE PHONE
 
 setTimeout(function(){
     $('.in').addClass('show').addClass('animated fadeIn');
-}, 2000);
+}, 2500);
 
+// ---------------- LOGO INTRO
+
+// setTimeout(function(){
+//     $('.logo-bar').removeClass('hide');
+// }, 0);
+
+// ---------------- FORM USABILITY ON MOBILE PHONE
+
+$('#contact-textarea').on('focus', function() {
+    document.body.scrollTop = $('#contact-textarea').offset().top;
+});
 
 });

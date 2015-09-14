@@ -23,9 +23,13 @@
             z-index: 999;
             transform: rotate(135deg);
             animation: expand 1500ms;
+            // animation-delay: 500ms;
             transform-origin: 50% 50%;
             margin: auto;
         }
+
+        .hide {display: hide;}
+
         @keyframes expand {
             0% {
                 width: 2px;
@@ -63,10 +67,12 @@
         .eben-text {
             margin-left: 0em;
             animation: eben-slide 2000ms;
+            // animation-delay: 500ms;
         }
         .hafkamp-text {
             margin-left: 0em;
             animation: hafkamp-slide 2000ms;
+            // animation-delay: 500ms;
         }
         @keyframes eben-slide {
             0% {
@@ -101,41 +107,41 @@
             }
         }
     }
-    .mouse {
-      width: 2em;
-      height: 3em;
-      margin: 5em auto;
-      border: #e6e6e6 thin solid;
-      border-radius: 300px;
-        display: none;
-    }
-
-    .mouse-wheel {
-        width: .4em;
-        height: .5em;
-        margin: .5em auto;
-        background: #cdcdcd;
-        border-radius: 300px;
-        animation: down 4000ms;
-//        animation-delay: 2s;
-    }
-
-    @keyframes down {
-      0% {margin: .5em auto;}
-      10% {margin: .8em auto;}
-      20% {margin: .5em auto;}
-      30% {margin: .8em auto;}
-      40% {margin: .5em auto;}
-      50% {margin: .8em auto;}
-      60% {margin: .5em auto;}
-      70% {margin: .8em auto;}
-      80% {margin: .5em auto;}
-      90% {margin: .8em auto;}
-      100% {margin: .5em auto;}
-    }
-
-//    .hide-mouse {display: none;}
-    .show {display: block;}
+//     .mouse {
+//       width: 2em;
+//       height: 3em;
+//       margin: 5em auto;
+//       border: #e6e6e6 thin solid;
+//       border-radius: 300px;
+//         display: none;
+//     }
+//
+//     .mouse-wheel {
+//         width: .4em;
+//         height: .5em;
+//         margin: .5em auto;
+//         background: #cdcdcd;
+//         border-radius: 300px;
+//         animation: down 4000ms;
+// //        animation-delay: 2s;
+//     }
+//
+//     @keyframes down {
+//       0% {margin: .5em auto;}
+//       10% {margin: .8em auto;}
+//       20% {margin: .5em auto;}
+//       30% {margin: .8em auto;}
+//       40% {margin: .5em auto;}
+//       50% {margin: .8em auto;}
+//       60% {margin: .5em auto;}
+//       70% {margin: .8em auto;}
+//       80% {margin: .5em auto;}
+//       90% {margin: .8em auto;}
+//       100% {margin: .5em auto;}
+//     }
+//
+// //    .hide-mouse {display: none;}
+//     .show {display: block;}
 }
 
 //.splash {

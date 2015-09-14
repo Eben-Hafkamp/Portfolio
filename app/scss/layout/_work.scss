@@ -4,7 +4,7 @@
   background:-webkit-gradient(linear, left top, right bottom, color-stop(0%,#1e5799), color-stop(100%,#7db9e8));
 
   h1 {
-    margin: .5em auto 1.5em;
+    margin: .5em auto 1.4em;
   }
 
   .fp-tableCell {display: flex; flex-direction: column;}
@@ -19,10 +19,12 @@
     }
   }
   .slider-nav{
+    display: flex;
+    justify-content: space-between;
     // outline: pink thin solid;
-    width: 50em;
+    width: 98vw;
     line-height: 0em;
-    margin: -2em auto;
+    margin: 3em auto;
     padding: 0 1em;
     text-align: center;
     &:focus {
@@ -32,8 +34,10 @@
       border:none;
     }
     .slide-logo{
-      margin: 5em auto;
-      padding: 1.5em;
+      // outline: yellow thin solid;
+      // width: 14em;
+      flex: 1 0 14em;
+      padding: 1.5em 0; //optimal at 1.5em 3em for tablet with 45 - 55 height on icons
       background: fade-out(#FFF, .9);
       img {margin: auto;}
     }
@@ -41,7 +45,7 @@
 
 
   .slider-nav div{
-    margin-right: .7em;
+    // margin-right: .5em;
   }
   .slick-slide{
     opacity: .2;
@@ -51,17 +55,15 @@
   }
   .slick-center{
     display: block;
-    max-width: 10% !important;
-    max-height:10% !important;
+    max-width: 12% !important;
+    max-height:20% !important;
     opacity: 1;
   }
 
   .slick-next {
-    // background: url(../../img/arrow-right-thin.png);
     background-size: cover;
   }
   .slick-prev {
-    // background: url(../../img/arrow-left-thin.png);
     background-size: cover;
   }
 
