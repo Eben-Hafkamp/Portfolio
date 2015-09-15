@@ -80,8 +80,15 @@ setTimeout(function(){
 
 // ---------------- FORM USABILITY ON MOBILE PHONE
 
-$('#contact-textarea').on('focus', function() {
-    document.body.scrollTop = $('#contact-textarea').offset().top;
-});
+// $('#contact-textarea').on('focus', function() {
+  // console.log("Hi Eben and Shadrak!");
+    //document.body.scrollTop = $('#contact-textarea').offset().top;
+    //console.log($('body'));
+    //$('body').scrollTo('#contact-textarea');
 
+    $('#contact-textarea').on('focus', function() {
+      var offset = $('#contact-textarea').offset();
+      $('html,body').animate({
+        scrollTop: offset.top,
+      });
 });

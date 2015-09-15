@@ -14,20 +14,10 @@
 }
 
 header {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   position: fixed;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: row;
+  justify-content: space-between;
   height: 7em;
   width: 100vw;
   border-bottom: thin white solid;
@@ -71,67 +61,31 @@ header #bars .burger-wrapper input:checked + label:before {
   background: #fafafa;
 }
 header #bars label:before {
-  -webkit-animation: animationOneReverse 1s ease forwards;
-          animation: animationOneReverse 1s ease forwards;
-}
-@-webkit-keyframes animationOneReverse {
-  0% {
-    -webkit-transform: rotate(315deg);
-            transform: rotate(315deg);
-  }
-  25% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-  50%, 100% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
+  animation: animationOneReverse 1s ease forwards;
 }
 @keyframes animationOneReverse {
   0% {
-    -webkit-transform: rotate(315deg);
-            transform: rotate(315deg);
+    transform: rotate(315deg);
   }
   25% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    transform: rotate(360deg);
   }
   50%, 100% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
 }
 header #bars input:checked + label:before {
-  -webkit-animation: animationOne 1s ease forwards;
-          animation: animationOne 1s ease forwards;
-}
-@-webkit-keyframes animationOne {
-  0%, 50% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  75% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-  100% {
-    -webkit-transform: rotate(315deg);
-            transform: rotate(315deg);
-  }
+  animation: animationOne 1s ease forwards;
 }
 @keyframes animationOne {
   0%, 50% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   75% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    transform: rotate(360deg);
   }
   100% {
-    -webkit-transform: rotate(315deg);
-            transform: rotate(315deg);
+    transform: rotate(315deg);
   }
 }
 header #bars label:after,
@@ -146,67 +100,31 @@ header #bars input:checked + label:after {
   background: #fafafa;
 }
 header #bars label:after {
-  -webkit-animation: animationTwoReverse 1s ease forwards;
-          animation: animationTwoReverse 1s ease forwards;
-}
-@-webkit-keyframes animationTwoReverse {
-  0% {
-    -webkit-transform: rotate(405deg);
-            transform: rotate(405deg);
-  }
-  25% {
-    -webkit-transform: rotate(450deg);
-            transform: rotate(450deg);
-  }
-  50%, 100% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
+  animation: animationTwoReverse 1s ease forwards;
 }
 @keyframes animationTwoReverse {
   0% {
-    -webkit-transform: rotate(405deg);
-            transform: rotate(405deg);
+    transform: rotate(405deg);
   }
   25% {
-    -webkit-transform: rotate(450deg);
-            transform: rotate(450deg);
+    transform: rotate(450deg);
   }
   50%, 100% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
 }
 header #bars input:checked + label:after {
-  -webkit-animation: animationTwo 1s ease forwards;
-          animation: animationTwo 1s ease forwards;
-}
-@-webkit-keyframes animationTwo {
-  0%, 50% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  75% {
-    -webkit-transform: rotate(450deg);
-            transform: rotate(450deg);
-  }
-  100% {
-    -webkit-transform: rotate(405deg);
-            transform: rotate(405deg);
-  }
+  animation: animationTwo 1s ease forwards;
 }
 @keyframes animationTwo {
   0%, 50% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   75% {
-    -webkit-transform: rotate(450deg);
-            transform: rotate(450deg);
+    transform: rotate(450deg);
   }
   100% {
-    -webkit-transform: rotate(405deg);
-            transform: rotate(405deg);
+    transform: rotate(405deg);
   }
 }
 header #bars label .burger:before {
@@ -217,78 +135,36 @@ header #bars label .burger:before {
   height: 4px;
   border-radius: 2px;
   background: #fafafa;
-  -webkit-animation: animationBurgerTopReverse 1s ease forwards;
-          animation: animationBurgerTopReverse 1s ease forwards;
-}
-@-webkit-keyframes animationBurgerTopReverse {
-  0%, 50% {
-    -webkit-transform: translateY(12px);
-            transform: translateY(12px);
-    opacity: 0;
-  }
-  51% {
-    -webkit-transform: translateY(12px);
-            transform: translateY(12px);
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
-    opacity: 1;
-  }
+  animation: animationBurgerTopReverse 1s ease forwards;
 }
 @keyframes animationBurgerTopReverse {
   0%, 50% {
-    -webkit-transform: translateY(12px);
-            transform: translateY(12px);
+    transform: translateY(12px);
     opacity: 0;
   }
   51% {
-    -webkit-transform: translateY(12px);
-            transform: translateY(12px);
+    transform: translateY(12px);
     opacity: 1;
   }
   100% {
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
+    transform: translateY(0px);
     opacity: 1;
   }
 }
 header #bars input:checked + label .burger:before {
-  -webkit-animation: animationBurgerTop 1s ease forwards;
-          animation: animationBurgerTop 1s ease forwards;
-}
-@-webkit-keyframes animationBurgerTop {
-  0% {
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
-    opacity: 1;
-  }
-  50% {
-    -webkit-transform: translateY(12px);
-            transform: translateY(12px);
-    opacity: 1;
-  }
-  51%, 100% {
-    -webkit-transform: translateY(12px);
-            transform: translateY(12px);
-    opacity: 0;
-  }
+  animation: animationBurgerTop 1s ease forwards;
 }
 @keyframes animationBurgerTop {
   0% {
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
+    transform: translateY(0px);
     opacity: 1;
   }
   50% {
-    -webkit-transform: translateY(12px);
-            transform: translateY(12px);
+    transform: translateY(12px);
     opacity: 1;
   }
   51%, 100% {
-    -webkit-transform: translateY(12px);
-            transform: translateY(12px);
+    transform: translateY(12px);
     opacity: 0;
   }
 }
@@ -300,78 +176,36 @@ header #bars label .burger:after {
   height: 4px;
   border-radius: 2px;
   background: #fafafa;
-  -webkit-animation: animationBurgerBottomReverse 1s ease forwards;
-          animation: animationBurgerBottomReverse 1s ease forwards;
-}
-@-webkit-keyframes animationBurgerBottomReverse {
-  0%, 50% {
-    -webkit-transform: translateY(-12px);
-            transform: translateY(-12px);
-    opacity: 0;
-  }
-  51% {
-    -webkit-transform: translateY(-12px);
-            transform: translateY(-12px);
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
-    opacity: 1;
-  }
+  animation: animationBurgerBottomReverse 1s ease forwards;
 }
 @keyframes animationBurgerBottomReverse {
   0%, 50% {
-    -webkit-transform: translateY(-12px);
-            transform: translateY(-12px);
+    transform: translateY(-12px);
     opacity: 0;
   }
   51% {
-    -webkit-transform: translateY(-12px);
-            transform: translateY(-12px);
+    transform: translateY(-12px);
     opacity: 1;
   }
   100% {
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
+    transform: translateY(0px);
     opacity: 1;
   }
 }
 header #bars input:checked + label .burger:after {
-  -webkit-animation: animationBurgerBottom 1s ease forwards;
-          animation: animationBurgerBottom 1s ease forwards;
-}
-@-webkit-keyframes animationBurgerBottom {
-  0% {
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
-    opacity: 1;
-  }
-  50% {
-    -webkit-transform: translateY(-12px);
-            transform: translateY(-12px);
-    opacity: 1;
-  }
-  51%, 100% {
-    -webkit-transform: translateY(-12px);
-            transform: translateY(-12px);
-    opacity: 0;
-  }
+  animation: animationBurgerBottom 1s ease forwards;
 }
 @keyframes animationBurgerBottom {
   0% {
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
+    transform: translateY(0px);
     opacity: 1;
   }
   50% {
-    -webkit-transform: translateY(-12px);
-            transform: translateY(-12px);
+    transform: translateY(-12px);
     opacity: 1;
   }
   51%, 100% {
-    -webkit-transform: translateY(-12px);
-            transform: translateY(-12px);
+    transform: translateY(-12px);
     opacity: 0;
   }
 }
@@ -385,9 +219,6 @@ header .cv {
 }
 
 .show {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -396,11 +227,7 @@ header .cv {
 }
 
 .sidebar {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   width: 100vw;
   height: 18em;
   position: fixed;
@@ -411,18 +238,9 @@ header .cv {
   background: rgba(255, 255, 255, 0.9);
 }
 .sidebar ul {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-justify-content: space-around;
-      -ms-flex-pack: distribute;
-          justify-content: space-around;
+  flex-direction: row;
+  justify-content: space-around;
   height: auto;
 }
 .sidebar ul li {
@@ -448,10 +266,7 @@ header .cv {
 }
 
 .logo {
-  -webkit-box-flex: 0;
-  -webkit-flex: 0 0 2em;
-      -ms-flex: 0 0 2em;
-          flex: 0 0 2em;
+  flex: 0 0 2em;
   width: 8em;
   margin: 5em auto 3em auto;
   background-image: url(../../img/logo.png);
@@ -460,15 +275,8 @@ header .cv {
 }
 
 #home {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   z-index: -2000;
   background-image: url("../../img/space-repeating1.png");
 }
@@ -487,41 +295,13 @@ header .cv {
   width: 5.8em;
   background-color: #fff;
   z-index: 999;
-  -webkit-transform: rotate(135deg);
-      -ms-transform: rotate(135deg);
-          transform: rotate(135deg);
-  -webkit-animation: expand 1500ms;
-          animation: expand 1500ms;
-  -webkit-transform-origin: 50% 50%;
-      -ms-transform-origin: 50% 50%;
-          transform-origin: 50% 50%;
+  transform: rotate(135deg);
+  animation: expand 1500ms;
+  transform-origin: 50% 50%;
   margin: auto;
 }
 #home .container .hide {
   display: hide;
-}
-@-webkit-keyframes expand {
-  0% {
-    width: 2px;
-  }
-  25% {
-    width: 2px;
-  }
-  30% {
-    width: 2px;
-    -webkit-transform: rotate(90deg);
-            transform: rotate(90deg);
-  }
-  50% {
-    width: 100px;
-    -webkit-transform: rotate(90deg);
-            transform: rotate(90deg);
-  }
-  100% {
-    width: 100px;
-    -webkit-transform: rotate(135deg);
-            transform: rotate(135deg);
-  }
 }
 @keyframes expand {
   0% {
@@ -532,18 +312,15 @@ header .cv {
   }
   30% {
     width: 2px;
-    -webkit-transform: rotate(90deg);
-            transform: rotate(90deg);
+    transform: rotate(90deg);
   }
   50% {
     width: 100px;
-    -webkit-transform: rotate(90deg);
-            transform: rotate(90deg);
+    transform: rotate(90deg);
   }
   100% {
     width: 100px;
-    -webkit-transform: rotate(135deg);
-            transform: rotate(135deg);
+    transform: rotate(135deg);
   }
 }
 #home .container .eben {
@@ -560,29 +337,11 @@ header .cv {
 }
 #home .container .eben-text {
   margin-left: 0em;
-  -webkit-animation: eben-slide 2000ms;
-          animation: eben-slide 2000ms;
+  animation: eben-slide 2000ms;
 }
 #home .container .hafkamp-text {
   margin-left: 0em;
-  -webkit-animation: hafkamp-slide 2000ms;
-          animation: hafkamp-slide 2000ms;
-}
-@-webkit-keyframes eben-slide {
-  0% {
-    margin-left: 4em;
-    opacity: 0;
-  }
-  60% {
-    margin-left: 4em;
-    opacity: 0;
-  }
-  70% {
-    opacity: 0;
-  }
-  100% {
-    left: 0;
-  }
+  animation: hafkamp-slide 2000ms;
 }
 @keyframes eben-slide {
   0% {
@@ -591,22 +350,6 @@ header .cv {
   }
   60% {
     margin-left: 4em;
-    opacity: 0;
-  }
-  70% {
-    opacity: 0;
-  }
-  100% {
-    left: 0;
-  }
-}
-@-webkit-keyframes hafkamp-slide {
-  0% {
-    margin-left: -8em;
-    opacity: 0;
-  }
-  60% {
-    margin-left: -8em;
     opacity: 0;
   }
   70% {
@@ -638,37 +381,20 @@ header .cv {
   padding-top: 11em;
 }
 #skills .skills-wrapper {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
-  -webkit-justify-content: space-around;
-      -ms-flex-pack: distribute;
-          justify-content: space-around;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 #skills .tools-wrapper {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
-  -webkit-justify-content: space-around;
-      -ms-flex-pack: distribute;
-          justify-content: space-around;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 #skills p {
   margin-bottom: .5em;
 }
 #skills span {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1 0 25%;
-      -ms-flex: 1 0 25%;
-          flex: 1 0 25%;
+  flex: 1 0 25%;
   color: white;
   font-size: 2em;
   font-family: Helvetica, Century Gothic, Arial;
@@ -702,35 +428,10 @@ header .cv {
   color: #e74c3c;
   position: relative;
   white-space: nowrap;
-  -webkit-animation: move 6s;
-          animation: move 6s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
+  animation: move 6s;
+  animation-iteration-count: infinite;
   font-size: 65px;
   letter-spacing: 2px;
-}
-@-webkit-keyframes move {
-  0% {
-    top: -10px;
-  }
-  20% {
-    top: -70px;
-  }
-  40% {
-    top: -140px;
-  }
-  60% {
-    top: -210px;
-  }
-  60% {
-    top: -210px;
-  }
-  80% {
-    top: -10px;
-  }
-  80% {
-    top: -10px;
-  }
 }
 @keyframes move {
   0% {
@@ -764,15 +465,8 @@ header .cv {
   margin: .5em auto 1.4em;
 }
 #work .fp-tableCell {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 #work .slick-center .slide-logo {
   color: #FFF;
@@ -784,14 +478,8 @@ header .cv {
   border: none;
 }
 #work .slider-nav {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   width: 98vw;
   line-height: 0em;
   margin: 3em auto;
@@ -805,10 +493,7 @@ header .cv {
   border: none;
 }
 #work .slider-nav .slide-logo {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1 0 14em;
-      -ms-flex: 1 0 14em;
-          flex: 1 0 14em;
+  flex: 1 0 14em;
   padding: 1.5em 0;
   background: rgba(255, 255, 255, 0.1);
 }
@@ -918,55 +603,36 @@ header .cv {
   margin: 3.5em auto 0;
 }
 #contact p {
-  padding: 1em 0;
+  padding: 1em 1.5em;
 }
 #contact .contact-form {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   width: 90vw;
   margin: 2em auto;
   overflow: hidden;
   background: white;
   border-radius: 5px;
 }
-#contact .message, #contact .contact, #contact .name, #contact .form-footer, #contact .form-header, #contact textarea {
+#contact .contact-form .message, #contact .contact-form .contact, #contact .contact-form .name, #contact .contact-form .form-footer, #contact .contact-form .form-header, #contact .contact-form textarea {
   clear: both;
   overflow: hidden;
 }
-#contact .name {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
+#contact .contact-form .name {
   display: flex;
 }
-#contact .name .first, #contact .name .last {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1 0 1em;
-      -ms-flex: 1 0 1em;
-          flex: 1 0 1em;
+#contact .contact-form .name .first, #contact .contact-form .name .last {
+  flex: 1 0 1em;
   height: 2.5em;
   text-indent: 1em;
   border: thin solid rgba(0, 0, 0, 0.1);
   font-size: 1.7em;
 }
-#contact .contact {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
+#contact .contact-form .contact {
   display: flex;
 }
-#contact .contact .email {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1 0 1em;
-      -ms-flex: 1 0 1em;
-          flex: 1 0 1em;
+#contact .contact-form .contact .email {
+  flex: 1 0 1em;
   height: 2.5em;
   text-indent: 1em;
   line-height: 50px;
@@ -976,17 +642,11 @@ header .cv {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   font-size: 1.7em;
 }
-#contact .message {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
+#contact .contact-form .message {
   display: flex;
 }
-#contact .message textarea {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1 0 1em;
-      -ms-flex: 1 0 1em;
-          flex: 1 0 1em;
+#contact .contact-form .message textarea {
+  flex: 1 0 1em;
   height: 10em;
   text-indent: 1em;
   line-height: 50px;
@@ -996,7 +656,7 @@ header .cv {
   border-right: 1px solid rgba(0, 0, 0, 0.1);
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
-#contact .form-footer {
+#contact .contact-form .form-footer {
   background: rgba(0, 0, 0, 0.05);
   line-height: 75px;
   height: 5em;
@@ -1005,7 +665,7 @@ header .cv {
   padding-left: 0;
   padding-right: 20px;
 }
-#contact .form-footer button {
+#contact .contact-form .form-footer button {
   width: 9em;
   height: 3em;
   background: #e74c3c;
@@ -1015,32 +675,35 @@ header .cv {
   color: white;
   float: right;
   border-bottom: 3px solid #c0392b;
-  -webkit-transition: all linear .2s;
-          transition: all linear .2s;
+  transition: all linear .2s;
   font-size: 1em;
 }
-#contact .form-footer button:hover {
+#contact .contact-form .form-footer button:hover {
   background: #c0392b;
 }
-#contact .form-footer button:focus {
+#contact .contact-form .form-footer button:focus {
   outline: none;
 }
-#contact .first:focus, #contact .last:focus, #contact .email:focus, #contact textarea:focus {
+#contact .contact-form .first:focus, #contact .contact-form .last:focus, #contact .contact-form .email:focus, #contact .contact-form textarea:focus {
   outline: none;
   background: rgba(52, 152, 219, 0.1);
   color: rgba(51, 51, 51, 0.7);
 }
+#contact .me-thumb {
+  width: 10em;
+  height: 10em;
+  margin: 8em 0 0 5vw;
+  border: white thin solid;
+  border-radius: 5px;
+}
+#contact span {
+  color: white;
+  margin-bottom: 5em;
+}
 
 main {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   z-index: -2000;
 }
 

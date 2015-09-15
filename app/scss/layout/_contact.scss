@@ -11,7 +11,7 @@
   }
 
   p {
-    padding: 1em 0;
+    padding: 1em 1.5em;
   }
 
   .contact-form {
@@ -22,89 +22,101 @@
     overflow: hidden;
     background: rgba(255,255,255,1);
     border-radius: 5px;
+
+    .message, .contact, .name, .form-footer, .form-header, textarea  {
+    //  display: block;
+     clear: both;
+     overflow: hidden;
     }
-
-  .message, .contact, .name, .form-footer, .form-header, textarea  {
-  //  display: block;
-   clear: both;
-   overflow: hidden;
-  }
-  .name {
-    display: flex;
-    .first, .last {
-      flex: 1 0 1em;
-      height: 2.5em;
-      text-indent: 1em;
-      border: thin solid rgba(0,0,0,.1);
-      font-size: 1.7em;
-    }
-  }
-  .contact {
-    display: flex;
-    .email {
-      flex: 1 0 1em;
-      height: 2.5em;
-      text-indent: 1em;
-      line-height: 50px;
-      // padding: 1em 0 1em 20px;
-      border-top: 0;
-      border-left: 1px solid rgba(0,0,0,.1);
-      border-right: 1px solid rgba(0,0,0,.1);
-      border-bottom: 1px solid rgba(0,0,0,.1);
-      font-size: 1.7em;
-    }
-  }
-  .message {
-    display: flex;
-    textarea {
-      flex: 1 0 1em;
-      height: 10em;
-      text-indent: 1em;
-      line-height: 50px;
-      font-size: 1.7em;
-      border-top: 0;
-      border-left: 1px solid rgba(0,0,0,.1);
-      border-right: 1px solid rgba(0,0,0,.1);
-      border-bottom: 1px solid rgba(0,0,0,.1);
-    }
-  }
-
-
-  .form-footer {
-    background: rgba(0,0,0,.05);
-    line-height: 75px;
-    height: 5em;
-    border-top: 1px dashed rgba(0,0,0,.3);
-    border-radius: 0 0 5px 5px;
-    padding-left: 0;
-    padding-right: 20px;
-
-    button {
-      width: 9em;
-      height: 3em;
-      background: rgba(231, 76, 60,1.0);
-      border-radius: 5px;
-      border: 0;
-      margin: 1em;
-      color: rgba(255,255,255,1);
-      float: right;
-      border-bottom: 3px solid rgba(192, 57, 43,1.0);
-      transition: all linear .2s;
-      font-size: 1em;
-
-      &:hover {
-        background: rgba(192, 57, 43,1.0);
-      }
-
-      &:focus {
-         outline: none;
+    .name {
+      display: flex;
+      .first, .last {
+        flex: 1 0 1em;
+        height: 2.5em;
+        text-indent: 1em;
+        border: thin solid rgba(0,0,0,.1);
+        font-size: 1.7em;
       }
     }
+    .contact {
+      display: flex;
+      .email {
+        flex: 1 0 1em;
+        height: 2.5em;
+        text-indent: 1em;
+        line-height: 50px;
+        // padding: 1em 0 1em 20px;
+        border-top: 0;
+        border-left: 1px solid rgba(0,0,0,.1);
+        border-right: 1px solid rgba(0,0,0,.1);
+        border-bottom: 1px solid rgba(0,0,0,.1);
+        font-size: 1.7em;
+      }
+    }
+    .message {
+      display: flex;
+      textarea {
+        flex: 1 0 1em;
+        height: 10em;
+        text-indent: 1em;
+        line-height: 50px;
+        font-size: 1.7em;
+        border-top: 0;
+        border-left: 1px solid rgba(0,0,0,.1);
+        border-right: 1px solid rgba(0,0,0,.1);
+        border-bottom: 1px solid rgba(0,0,0,.1);
+      }
+    }
+    .form-footer {
+      background: rgba(0,0,0,.05);
+      line-height: 75px;
+      height: 5em;
+      border-top: 1px dashed rgba(0,0,0,.3);
+      border-radius: 0 0 5px 5px;
+      padding-left: 0;
+      padding-right: 20px;
+
+      button {
+        width: 9em;
+        height: 3em;
+        background: rgba(231, 76, 60,1.0);
+        border-radius: 5px;
+        border: 0;
+        margin: 1em;
+        color: rgba(255,255,255,1);
+        float: right;
+        border-bottom: 3px solid rgba(192, 57, 43,1.0);
+        transition: all linear .2s;
+        font-size: 1em;
+
+        &:hover {
+          background: rgba(192, 57, 43,1.0);
+        }
+
+        &:focus {
+           outline: none;
+        }
+      }
+    }
+
+    .first:focus, .last:focus, .email:focus, textarea:focus {
+      outline: none;
+      background: rgba(52, 152, 219,.1);
+      color: rgba(51,51,51,.7);
+    }
+
   }
 
-  .first:focus, .last:focus, .email:focus, textarea:focus {
-    outline: none;
-    background: rgba(52, 152, 219,.1);
-    color: rgba(51,51,51,.7);
+  .me-thumb {
+    width:10em;
+    height: 10em;
+    margin: 8em 0 0 5vw;
+    border:white thin solid;
+    border-radius: 5px;
+  }
+
+  span  {
+    color: white;
+    margin-bottom: 5em;
   }
 }
