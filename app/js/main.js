@@ -16,10 +16,17 @@ $(function() {
         normalScrollElementTouchThreshold: 5
     });
 
+// ---------------- BURGER TOGGLE STATES
+
+    $('.burger-button').on('click', function(e) {
+      e.preventDefault();
+      $(this).toggleClass('goto-cross').toggleClass('goto-burger');
+    });
+
 // ---------------- BURGER NAVIGATION MOBILE PHONE
 
     var isOpen = false;
-    $('#click').on('click', function() {
+    $('#bars').on('click', function() {
         if(isOpen == true) {
             $('.sidebar').addClass('animated fadeOut');
             $('.sidebar').one('animationend', function() {
@@ -40,7 +47,7 @@ $(function() {
 
     $('.slider-nav').slick({
       centerMode: true,
-      centerPadding: '10em',
+      centerPadding: '1em',
       slidesToShow: 3,
       slidesToScroll: 1,
       asNavFor: '.slider-for',
@@ -89,6 +96,7 @@ setTimeout(function(){
     $('#contact-textarea').on('focus', function() {
       var offset = $('#contact-textarea').offset();
       $('html,body').animate({
-        scrollTop: offset.top,
+        scrollTop: offset.top
       });
+    });
 });

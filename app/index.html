@@ -10,27 +10,23 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script type="text/javascript">
     </script>
-    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
     <title>EH | Portfolio</title>
 </head>
 <body>
     <header class="in">
       <div id="bars">
-        <input id="click" name="exit" type="checkbox" />
-        <label for="click">
-          <span class="burger"></span>
-          <span class="menu"></span>
-        </label>
+        <a href="#" class="burger-button goto-burger"></a>
       </div>
       <span class="cv">CV</span>
     </header>
     <nav>
         <div class="sidebar hide">
             <ul>
-                <li><img src="img/work.png" class="" height="85"><span>WORK<span></li>
-                <li><img src="img/about.png" class="" height="85"><span>SKILLS</span></li>
-                <li><img src="img/calendar.png" class="" height="85"><span>AVAILABLE</span></li>
-                <li><img src="img/arroba.png" class="" height="85"><span>CONTACT</span></li>
+                <li><img src="img/arroba.png" class="" height="35"><span>CONTACT</span></li>
+                <li><img src="img/work.png" class="" height="35"><span>WORK<span></li>
+                <li><img src="img/about.png" class="" height="35"><span>SKILLS</span></li>
+                <li><img src="img/calendar.png" class="" height="35"><span>AVAILABLE</span></li>
             </ul>
         </div>
         <!-- <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
@@ -53,7 +49,9 @@
                             <div class="hafkamp-text"><img src="img/hafkamp.png"></div>
                         </div>
                     </div>
-                    <div class="logo-bar"></div>
+                    <div class="bar-wrap">
+                      <div class="logo-bar"></div>
+                    </div>
                 </div>
                 <div class="mouse">
                     <div class="mouse-wheel"></div>
@@ -65,38 +63,38 @@
               <section id="slick-content">
 
               <div class="slider-nav">
-                <div><div class="slide-logo"><img src="img/goldway-logo.png" height="40"></div></div>
-                <div><div class="slide-logo"><img src="img/cyanfox-logo2.png" height="40"></div></div>
-                <div><div class="slide-logo"><img src="img/nis-logo3.png" height="40"></div></div>
-                <div><div class="slide-logo"><img src="img/bbj-logo.png" height="40"></div></div>
+                <div><div class="slide-logo"><img src="img/goldway-logo.png" height="20"></div></div>
+                <div><div class="slide-logo"><img src="img/cyanfox-logo2.png" height="20"></div></div>
+                <div><div class="slide-logo"><img src="img/nis-logo3.png" height="20"></div></div>
+                <div><div class="slide-logo"><img src="img/bbj-logo.png" height="20"></div></div>
                 <!-- <div><div class="slide-logo">5</div></div> -->
-                <div><div class="slide-logo"><img src="img/rhino-logo.jpg" height="40"></div></div>
+                <div><div class="slide-logo"><img src="img/rhino-logo.jpg" height="20"></div></div>
               </div>
               <div class="slider-for">
                 <div class="contain-1">
                   <h1>HTML & CSS</h1>
-                  <div class="goldway"></div>
+                  <div id="img-place" class="goldway"></div>
                   <p>A website centered around an international hotel as a first project in my Web Development course.</p>
-                  <div class="dots"><img src="img/dots-1.png"></div>
+                  <div class="dots"><img src="img/dots-1.png" height="8em"></div>
                   <!-- <span>Visit Page</span> -->
                 </div>
                 <div class="contain-2">
                   <h1>PHP from the ground up</h1>
-                  <div class="cyanfox"></div>
+                  <div id="img-place" class="cyanfox"></div>
                   <p>Game review site built the classical PHP way containing admins, regular users and expert users.</p>
-                  <div class="dots"><img src="img/dots-2.png"></div>
+                  <div class="dots"><img src="img/dots-2.png" height="8em"></div>
                 </div>
                 <div class="contain-3">
                   <h1>Responsive SASS & Flexbox</h1>
-                  <div class="nis"></div>
+                  <div id="img-place" class="nis"></div>
                   <p>Redesigned and enhanced the responsiveness of a website called netinsites.</p>
-                  <div class="dots"><img src="img/dots-3.png"></div>
+                  <div class="dots"><img src="img/dots-3.png" height="8em"></div>
                 </div>
                 <div class="contain-4">
                   <h1>Design</h1>
-                  <div class="bbj"></div>
+                  <div id="img-place" class="bbj"></div>
                   <p>Created for an artisan (no pun intended) bread company.</p>
-                  <div class="dots"><img src="img/dots-4.png"></div>
+                  <div class="dots"><img src="img/dots-4.png" height="8em"></div>
                 </div>
                 <!-- <div class="contain-5">
                   <h1></h1>
@@ -105,9 +103,9 @@
                 </div> -->
                 <div class="contain-6">
                   <h1>Classical OOP</h1>
-                  <div class="rhino"></div>
+                  <div id="img-place" class="rhino"></div>
                   <p>Project on a retailer of records. Website has a functional shopping cart.</p>
-                  <div class="dots"><img src="img/dots-5.png"></div>
+                  <div class="dots"><img src="img/dots-5.png" height="8em"></div>
                 </div>
               </div>
                 <!-- <div class="slider slider-nav"> -->
@@ -115,17 +113,17 @@
                 <!-- </div> -->
             </div>
             <div class="section" id="skills">
-              <h1>About Me</h1>
+              <h1>About My Code</h1>
                <p>Some of my core skills include:</p>
                <div class="skills-wrapper">
                   <span>HTML</span>
                   <span>Sass</span>
                   <span>jQuery</span>
                   <span>PHP SQL</span>
-                  <img src="img/icon-html.png" height="110">
-                  <img src="img/icon-sass.png" height="110">
-                  <img src="img/icon-jquery.png" height="110">
-                  <img src="img/icon-php.png" height="110">
+                  <img src="img/icon-html.png" height="40">
+                  <img src="img/icon-sass.png" height="40">
+                  <img src="img/icon-jquery.png" height="40">
+                  <img src="img/icon-php.png" height="40">
                </div>
                <p>I can use the following tools and frameworks:</p>
                <div class="tools-wrapper">
@@ -133,10 +131,10 @@
                  <span>Gulp</span>
                  <span>Laravel</span>
                  <span>Adobe</span>
-                 <img src="img/icon-git.png" height="110">
-                 <img src="img/icon-gulp.png" height="110">
-                 <img src="img/icon-laravel.png" height="110">
-                 <img src="img/icon-adobe.png" height="110">
+                 <img src="img/icon-git.png" height="40">
+                 <img src="img/icon-gulp.png" height="40">
+                 <img src="img/icon-laravel.png" height="40">
+                 <img src="img/icon-adobe.png" height="40">
                </div>
                <div id="Animation-front">
                 <span>I'm a</span>
@@ -153,21 +151,12 @@
             <div class="section" id="contact">
                <h1>Contact</h1>
                <p>If you want to catch up for a coffee or just want to get in touch, please leave me a message.</p>
-               <form action="#" class="contact-form">
-                  <div class='name'>
-                    <input class='first' placeholder='First Name' type='text'>
-                    <input class='last' placeholder='Last Name' type='text'>
-                  </div>
-                  <div class='contact'>
-                    <input class='email' placeholder='E-mail Address' type='text'>
-                  </div>
-                  <div class='message'>
-                    <textarea id="contact-textarea" placeholder='Your Suggestions Here!'></textarea>
-                  </div>
-                  <div class="form-footer">
-                    <button>Send</button>
-                  </div>
-                </form>
+               <form id="form" class="topBefore">
+                <input id="name" type="text" placeholder="NAME">
+                <input id="email" type="text" placeholder="E-MAIL">
+                <textarea id="message" type="text" placeholder="MESSAGE"></textarea>
+                <input id="submit" type="submit" value="SEND!">
+              </form>
                 <div class="me-thumb">
 
                 </div>

@@ -1,10 +1,10 @@
 #work {
   height: 100%;
-  padding-top: 7em;
+  padding-top: 1em;
   background:-webkit-gradient(linear, left top, right bottom, color-stop(0%,#1e5799), color-stop(100%,#7db9e8));
 
   h1 {
-    margin: .5em auto 1.4em;
+    margin: .6em auto 1em;
   }
 
   .fp-tableCell {display: flex; flex-direction: column;}
@@ -21,10 +21,9 @@
   .slider-nav{
     display: flex;
     justify-content: space-between;
-    // outline: pink thin solid;
     width: 98vw;
     line-height: 0em;
-    margin: 3em auto;
+    margin: 3em auto 1em;
     padding: 0 1em;
     text-align: center;
     &:focus {
@@ -34,7 +33,6 @@
       border:none;
     }
     .slide-logo{
-      // outline: yellow thin solid;
       // width: 14em;
       flex: 1 0 14em;
       padding: 1.5em 0; //optimal at 1.5em 3em for tablet with 45 - 55 height on icons
@@ -42,7 +40,6 @@
       img {margin: auto;}
     }
   }
-
 
   .slider-nav div{
     // margin-right: .5em;
@@ -70,58 +67,64 @@
   .slider-for {
     width:98vw;
     max-width: 75em;
-    height:35em;
+    height:15em;
     margin: auto;
     text-align: center;
 
-    .contain-1 {
-      padding-bottom:1em;
+    #img-place {@include fade-img-mobile;}
 
-      .goldway {
-        @include fade-img;
-        background-image:url(../../img/goldway.png);
-      }
-      span {
-        padding: .5em;
-        font-family:$font-stack;
-        font-size: 1.8em;
-        letter-spacing: .1em;
-        line-height: 1.5em;
-        color: white;
-      }
+    .goldway {
+      background-image:url(../../img/goldway.png);
     }
-    .contain-2 {
-      .cyanfox {
-        @include fade-img;
-        background-image: url(../../img/cyanfox1.png);
-      }
+    .cyanfox {
+      background-image: url(../../img/cyanfox1.png);
     }
-    .contain-3 {
-      .nis {
-        @include fade-img;
-        background-image:url(../../img/nis2.png);
-      }
+    .nis {
+      background-image:url(../../img/nis2.png);
     }
-    .contain-4 {
-      .bbj {
-        @include fade-img;
-        background-image:url(../../img/bb22j.png);
-      }
+    .bbj {
+      background-image:url(../../img/bb22j.png);
     }
-    .contain-6 {
-      .rhino {
-        @include fade-img;
-        background-image:url(../../img/rhino.png);
-      }
+    .rhino {
+      background-image:url(../../img/rhino.png);
     }
+
   }
   .dots {
+    // outline: pink solid thin;
     width: 100%;
-    height:3em;
     position: absolute;
-    top:65em;
+    top:23em;
     img {
       margin: auto;
     }
   }
 }
+
+@include respond-to(tablet-portrait){
+  #work {
+    padding-top: 3em;
+    h1 {
+      margin: 2em auto 2.4em;
+    }
+    #img-place {@include fade-img-tablet;}
+    .dots {
+      // outline: pink solid thin;
+      top:39em;
+    }
+  }
+};
+
+@include respond-to(tablet-landscape){
+  #work {
+    padding-top: 2em;
+    h1 {
+      margin: 1em auto 1.4em;
+    }
+    #img-place {@include fade-img-tablet-landscape;}
+    .dots {
+      // outline: pink solid thin;
+      top:35em;
+    }
+  }
+};
