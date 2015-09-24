@@ -729,12 +729,6 @@ header .cv {
   max-height: 20% !important;
   opacity: 1;
 }
-#work .slick-next {
-  background-size: cover;
-}
-#work .slick-prev {
-  background-size: cover;
-}
 #work .slider-for {
   width: 98vw;
   max-width: 75em;
@@ -742,63 +736,91 @@ header .cv {
   margin: auto;
   text-align: center;
 }
-#work .slider-for #img-place {
-  margin: auto;
-  height: 12em;
-  width: 98vw;
-  position: relative;
-  background-size: cover;
-  background-position: 50% 0%;
+#work .slider-for .goldway-2 {
+  display: none;
 }
-#work .slider-for .goldway {
-  background-image: url(../../img/goldway.png);
+#work .slider-for .cyanfox-2 {
+  display: none;
 }
-#work .slider-for .cyanfox {
-  background-image: url(../../img/cyanfox1.png);
+#work .slider-for .nis-2 {
+  display: none;
 }
-#work .slider-for .nis {
-  background-image: url(../../img/nis2.png);
+#work .slider-for .bbj-2 {
+  display: none;
 }
-#work .slider-for .bbj {
-  background-image: url(../../img/bb22j.png);
+#work .slider-for .rhino-2 {
+  display: none;
 }
-#work .slider-for .rhino {
-  background-image: url(../../img/rhino.png);
-}
-#work .dots {
-  width: 100%;
-  position: absolute;
-  top: 23em;
-}
-#work .dots img {
-  margin: auto;
-}
-
-@media (min-width: 48em) {
-  #work {
-    padding-top: 3em;
-  }
-  #work h1 {
-    margin: 2em auto 2.4em;
-  }
-  #work #img-place {
+@media only screen and (max-width: 45.999em) {
+  #work .slider-for #img-place {
     margin: auto;
-    height: 26em;
+    height: 14em;
     width: 98vw;
     position: relative;
     background-size: cover;
     background-position: 50% 0%;
   }
-  #work .dots {
-    top: 39em;
-  }
 }
-@media (min-width: 50em) {
+#work .slider-for .dots {
+  height: 1em;
+  width: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+#work .slider-for .contain-1 .dots {
+  background-image: url(../../img/dots-1.png);
+}
+#work .slider-for .contain-1 .goldway {
+  background-image: url(../../img/goldway.png);
+}
+#work .slider-for .contain-2 .dots {
+  background-image: url(../../img/dots-2.png);
+}
+#work .slider-for .contain-2 .cyanfox {
+  background-image: url(../../img/cyanfox1.png);
+}
+#work .slider-for .contain-3 .dots {
+  background-image: url(../../img/dots-3.png);
+}
+#work .slider-for .contain-3 .nis {
+  background-image: url(../../img/nis2.png);
+}
+#work .slider-for .contain-4 .dots {
+  background-image: url(../../img/dots-4.png);
+}
+#work .slider-for .contain-4 .bbj {
+  background-image: url(../../img/bb22j.png);
+}
+#work .slider-for .contain-6 .dots {
+  background-image: url(../../img/dots-5.png);
+}
+#work .slider-for .contain-6 .rhino {
+  background-image: url(../../img/rhino.png);
+}
+
+@media (min-width: 46em) {
   #work {
     padding-top: 2em;
   }
   #work h1 {
+    font-size: 1.3em;
     margin: 1em auto 1.4em;
+  }
+  #work p {
+    padding: 2.7em 2em;
+    font-size: .9em;
+    letter-spacing: .15em;
+  }
+  #work .slider-nav .slick-next {
+    padding-left: 1em;
+    background-image: url(../../img/arrow-right-thin.png);
+    background-size: cover;
+  }
+  #work .slider-nav .slick-prev {
+    padding-right: 1em;
+    background-image: url(../../img/arrow-left-thin.png);
+    background-size: cover;
   }
   #work #img-place {
     margin: auto;
@@ -808,8 +830,99 @@ header .cv {
     background-size: cover;
     background-position: 50% 0%;
   }
+  #work .contain-1 .dots {
+    height: 1em;
+    top: 35em;
+    background-image: url(../../img/dots-1.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+  #work .contain-2 .dots {
+    height: 1em;
+    top: 35em;
+    background-image: url(../../img/dots-2.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+  #work .slider-nav {
+    width: 75vw;
+  }
+}
+@media (min-width: 70em) {
+  #work {
+    padding-top: 2em;
+  }
+  #work h1 {
+    font-size: 1.6em;
+    margin: 1em auto 1.4em;
+  }
+  #work p {
+    padding: 4em 0em;
+    font-size: .9em;
+    letter-spacing: .15em;
+  }
+  #work #img-place {
+    margin: auto;
+    height: 22em;
+    width: 45%;
+    position: relative;
+    background-size: cover;
+    background-position: 50% 0%;
+  }
   #work .dots {
     top: 35em;
+  }
+  #work .slider-nav {
+    width: 55vw;
+  }
+  #work .slider-for {
+    max-width: 80%;
+    height: 35em;
+  }
+  #work .slider-for .goldway {
+    background-image: url(../../img/goldway.png);
+  }
+  #work .slider-for .cyanfox {
+    background-image: url(../../img/cyanfox1.png);
+  }
+  #work .slider-for .d-img-wrap {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+  }
+  #work .slider-for .d-img-wrap .goldway-2 {
+    display: block;
+    background-image: url(../../img/goldway.png);
+  }
+  #work .slider-for .d-img-wrap .cyanfox-2 {
+    display: block;
+    background-image: url(../../img/cyanfox1.png);
+  }
+  #work .slider-for .d-img-wrap .nis-2 {
+    display: block;
+    background-image: url(../../img/nis2.png);
+  }
+  #work .slider-for .d-img-wrap .bbj-2 {
+    display: block;
+    background-image: url(../../img/bb22j.png);
+  }
+  #work .slider-for .d-img-wrap .rhino-2 {
+    display: block;
+    background-image: url(../../img/rhino.png);
+  }
+  #work .slider-for .rhino {
+    background-image: url(../../img/rhino.png);
   }
 }
 .fp-tableCell {
@@ -966,7 +1079,7 @@ main {
 }
 
 h1 {
-  font-size: 1.4em;
+  font-size: 1.2em;
   font-family: Helvetica, Century Gothic, Arial;
   color: white;
 }

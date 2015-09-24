@@ -1,8 +1,8 @@
 $breakpoints: (
-  'tablet-portrait'  : 48em,
-  'tablet-landscape'  : 50em,
-  'medium' : 992px,
-  'large'  : 1200px
+  'tablet-portrait'  : 46em,
+  'tablet'  : 46em,
+  'small-desktop' : 70em,
+  'large-desktop'  : 82em
 );
 
 @mixin respond-to($breakpoint) {
@@ -23,26 +23,35 @@ $breakpoints: (
 
 @mixin fade-img-mobile {
   margin: auto;
-  height:12em;
+  height:14em;
   width:98vw;
   position: relative;
   background-size:cover;
   background-position: 50% 0%;
 }
+
+// @mixin fade-img-tablet {
+//   margin: auto;
+//   height:26em;
+//   width:98vw;
+//   position: relative;
+//   background-size:cover;
+//   background-position: 50% 0%;
+// }
 
 @mixin fade-img-tablet {
   margin: auto;
-  height:26em;
-  width:98vw;
+  height:24.5em;
+  width:70vw;
   position: relative;
   background-size:cover;
   background-position: 50% 0%;
 }
 
-@mixin fade-img-tablet-landscape {
+@mixin fade-img-small-desktop {
   margin: auto;
-  height:24.5em;
-  width:70vw;
+  height:22em;
+  width:45%;
   position: relative;
   background-size:cover;
   background-position: 50% 0%;

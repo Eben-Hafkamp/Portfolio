@@ -40,10 +40,6 @@
       img {margin: auto;}
     }
   }
-
-  .slider-nav div{
-    // margin-right: .5em;
-  }
   .slick-slide{
     opacity: .2;
     &:focus {
@@ -57,13 +53,6 @@
     opacity: 1;
   }
 
-  .slick-next {
-    background-size: cover;
-  }
-  .slick-prev {
-    background-size: cover;
-  }
-
   .slider-for {
     width:98vw;
     max-width: 75em;
@@ -71,60 +60,225 @@
     margin: auto;
     text-align: center;
 
-    #img-place {@include fade-img-mobile;}
+    .goldway-2 {display: none;}
+    .cyanfox-2 {display: none;}
+    .nis-2 {display: none;}
+    .bbj-2 {display: none;}
+    .rhino-2 {display: none;}
 
-    .goldway {
-      background-image:url(../../img/goldway.png);
-    }
-    .cyanfox {
-      background-image: url(../../img/cyanfox1.png);
-    }
-    .nis {
-      background-image:url(../../img/nis2.png);
-    }
-    .bbj {
-      background-image:url(../../img/bb22j.png);
-    }
-    .rhino {
-      background-image:url(../../img/rhino.png);
+    @media only screen and (max-width : 45.999em) {
+      #img-place {@include fade-img-mobile;}
     }
 
-  }
-  .dots {
-    // outline: pink solid thin;
-    width: 100%;
-    position: absolute;
-    top:23em;
-    img {
-      margin: auto;
+
+    .dots {
+      height:1em;
+      width: 100%;
+      // position: absolute;
+      // top:25em;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+    }
+
+    .contain-1 {
+      .dots {
+        background-image: url(../../img/dots-1.png);
+      }
+      .goldway {
+        background-image:url(../../img/goldway.png);
+      }
+    }
+    .contain-2 {
+      .dots {
+        background-image: url(../../img/dots-2.png);
+      }
+      .cyanfox {
+        background-image: url(../../img/cyanfox1.png);
+      }
+    }
+    .contain-3 {
+      .dots {
+        background-image: url(../../img/dots-3.png);
+      }
+      .nis {
+        background-image:url(../../img/nis2.png);
+      }
+    }
+    .contain-4 {
+      .dots {
+        background-image: url(../../img/dots-4.png);
+      }
+      .bbj {
+        background-image:url(../../img/bb22j.png);
+      }
+    }
+    .contain-6 {
+      .dots {
+        background-image: url(../../img/dots-5.png);
+      }
+      .rhino {
+        background-image:url(../../img/rhino.png);
+      }
     }
   }
 }
 
-@include respond-to(tablet-portrait){
+// @include respond-to(tablet-portrait){
+//   #work {
+//     padding-top: 3em;
+//     h1 {
+//       font-size: 1.5em;
+//       margin: 2em auto 2.4em;
+//     }
+//     p {
+//       padding:4em 2em;
+//       font-size: 1em;
+//       letter-spacing: .15em;
+//     }
+//     #img-place {@include fade-img-tablet;}
+//
+//     .contain-1 {
+//       .dots {
+//         outline: pink solid thin;
+//         height:1em;
+//         top:45em;
+//         background-image: url(../../img/dots-1.png);
+//       }
+//     }
+//
+//     .contain-2 {
+//       .dots {
+//         outline: pink solid thin;
+//         height:1em;
+//         top:45em;
+//         background-image: url(../../img/dots-2.png);
+//       }
+//     }
+//
+//   }
+// };
+
+@include respond-to(tablet){
   #work {
-    padding-top: 3em;
+    padding-top: 2em;
     h1 {
-      margin: 2em auto 2.4em;
+      font-size: 1.3em;
+      margin: 1em auto 1.4em;
+    }
+    p {
+      padding:2.7em 2em;
+      font-size: .9em;
+      letter-spacing: .15em;
+    }
+    .slider-nav {
+      .slick-next {
+        // outline: yellow thin solid;
+        padding-left:1em;
+        background-image: url(../../img/arrow-right-thin.png);
+        background-size: cover;
+      }
+      .slick-prev {
+        // outline: yellow thin solid;
+        padding-right:1em;
+        background-image: url(../../img/arrow-left-thin.png);
+        background-size: cover;
+      }
     }
     #img-place {@include fade-img-tablet;}
-    .dots {
-      // outline: pink solid thin;
-      top:39em;
+
+    .contain-1 {
+      .dots {
+        // outline: pink solid thin;
+        height:1em;
+        top:35em;
+        background-image: url(../../img/dots-1.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+      }
+    }
+
+    .contain-2 {
+      .dots {
+        // outline: pink solid thin;
+        height:1em;
+        top:35em;
+        background-image: url(../../img/dots-2.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+      }
+    }
+
+    .slider-nav{
+      width: 75vw;
     }
   }
 };
 
-@include respond-to(tablet-landscape){
+@include respond-to(small-desktop){
   #work {
     padding-top: 2em;
     h1 {
+      font-size: 1.6em;
       margin: 1em auto 1.4em;
     }
-    #img-place {@include fade-img-tablet-landscape;}
+    p {
+      padding:4em 0em;
+      font-size: .9em;
+      letter-spacing: .15em;
+    }
+    #img-place {@include fade-img-small-desktop;}
     .dots {
       // outline: pink solid thin;
       top:35em;
+    }
+    .slider-nav{
+      width: 55vw;
+    }
+    .slider-for {
+      // outline: yellow solid thin;
+      max-width: 80%;
+      height:35em;
+
+      .goldway {
+        background-image:url(../../img/goldway.png);
+      }
+      .cyanfox {
+        background-image: url(../../img/cyanfox1.png);
+      }
+      .d-img-wrap {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+        .goldway-2 {
+          display: block;
+          background-image:url(../../img/goldway.png);
+        }
+        .cyanfox-2 {
+          display: block;
+          background-image: url(../../img/cyanfox1.png);
+        }
+        .nis-2 {
+          display: block;
+          background-image:url(../../img/nis2.png);
+        }
+        .bbj-2 {
+          display: block;
+          background-image:url(../../img/bb22j.png);
+        }
+        .rhino-2 {
+          display: block;
+          background-image:url(../../img/rhino.png);
+        }
+      }
+
+      .rhino {
+        background-image:url(../../img/rhino.png);
+      }
+
     }
   }
 };
