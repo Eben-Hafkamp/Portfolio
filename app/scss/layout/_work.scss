@@ -6,6 +6,7 @@
   h1 {
     margin: .6em auto 1em;
   }
+  .big-dev-p {display: none;}
 
   .fp-tableCell {display: flex; flex-direction: column;}
 
@@ -33,9 +34,8 @@
       border:none;
     }
     .slide-logo{
-      // width: 14em;
       flex: 1 0 14em;
-      padding: 1.5em 0; //optimal at 1.5em 3em for tablet with 45 - 55 height on icons
+      padding: 1em 0;
       background: fade-out(#FFF, .9);
       img {margin: auto;}
     }
@@ -56,7 +56,7 @@
   .slider-for {
     width:98vw;
     max-width: 75em;
-    height:15em;
+    height:28em;
     margin: auto;
     text-align: center;
 
@@ -74,12 +74,14 @@
     .dots {
       height:1em;
       width: 100%;
-      // position: absolute;
-      // top:25em;
+      position: absolute;
+      top:24em;
       background-size: contain;
       background-repeat: no-repeat;
       background-position: 50% 50%;
     }
+
+    .slick-slide {position: relative; height:100vh;}
 
     .contain-1 {
       .dots {
@@ -121,133 +123,124 @@
         background-image:url(../../img/rhino.png);
       }
     }
+    .goldway-1 {
+      display: none;
+    }
+    .cyanfox-1 {
+      display: none;
+    }
+    .nis-1 {
+      display: none;
+    }
+    .bbj-1 {
+      display: none;
+    }
+    .rhino-1 {
+      display: none;
+    }
   }
 }
 
-// @include respond-to(tablet-portrait){
-//   #work {
-//     padding-top: 3em;
-//     h1 {
-//       font-size: 1.5em;
-//       margin: 2em auto 2.4em;
-//     }
-//     p {
-//       padding:4em 2em;
-//       font-size: 1em;
-//       letter-spacing: .15em;
-//     }
-//     #img-place {@include fade-img-tablet;}
-//
-//     .contain-1 {
-//       .dots {
-//         outline: pink solid thin;
-//         height:1em;
-//         top:45em;
-//         background-image: url(../../img/dots-1.png);
-//       }
-//     }
-//
-//     .contain-2 {
-//       .dots {
-//         outline: pink solid thin;
-//         height:1em;
-//         top:45em;
-//         background-image: url(../../img/dots-2.png);
-//       }
-//     }
-//
-//   }
-// };
-
 @include respond-to(tablet){
+
   #work {
     padding-top: 2em;
+
     h1 {
       font-size: 1.3em;
-      margin: 1em auto 1.4em;
+      margin: 1em auto 1em;
     }
+
     p {
-      padding:2.7em 2em;
-      font-size: .9em;
-      letter-spacing: .15em;
+      display: none;
     }
+
+    .big-dev-p {display: block; padding:0em 2em 1em; font-size: .9em; letter-spacing: .15em;}
+
     .slider-nav {
+      width: 75vw;
+
+      .slide-logo{
+        padding: 1.5em 0;
+      }
+
+      .slide-logo img {height:22px;}
+
       .slick-next {
-        // outline: yellow thin solid;
         padding-left:1em;
         background-image: url(../../img/arrow-right-thin.png);
         background-size: cover;
       }
       .slick-prev {
-        // outline: yellow thin solid;
         padding-right:1em;
         background-image: url(../../img/arrow-left-thin.png);
         background-size: cover;
       }
     }
+
     #img-place {@include fade-img-tablet;}
+
+    .slider-for .dots {top:34em; height:1em;}
 
     .contain-1 {
       .dots {
-        // outline: pink solid thin;
-        height:1em;
-        top:35em;
         background-image: url(../../img/dots-1.png);
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: 50% 50%;
       }
     }
-
     .contain-2 {
       .dots {
-        // outline: pink solid thin;
-        height:1em;
-        top:35em;
         background-image: url(../../img/dots-2.png);
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: 50% 50%;
       }
     }
-
-    .slider-nav{
-      width: 75vw;
+    .contain-3 {
+      .dots {
+        background-image: url(../../img/dots-3.png);
+      }
+    }
+    .contain-4 {
+      .dots {
+        background-image: url(../../img/dots-4.png);
+      }
+    }
+    .contain-6 {
+      .dots {
+        background-image: url(../../img/dots-5.png);
+      }
     }
   }
 };
 
 @include respond-to(small-desktop){
+
   #work {
     padding-top: 2em;
+
     h1 {
       font-size: 1.6em;
       margin: 1em auto 1.4em;
     }
+
     p {
       padding:4em 0em;
       font-size: .9em;
       letter-spacing: .15em;
     }
+
     #img-place {@include fade-img-small-desktop;}
     .dots {
       // outline: pink solid thin;
       top:35em;
     }
+
     .slider-nav{
       width: 55vw;
     }
+
     .slider-for {
       // outline: yellow solid thin;
       max-width: 80%;
       height:35em;
 
-      .goldway {
-        background-image:url(../../img/goldway.png);
-      }
-      .cyanfox {
-        background-image: url(../../img/cyanfox1.png);
-      }
       .d-img-wrap {
         display: flex;
         flex-direction: row;
@@ -274,11 +267,78 @@
           background-image:url(../../img/rhino.png);
         }
       }
+    }
+  }
+};
 
-      .rhino {
-        background-image:url(../../img/rhino.png);
+@include respond-to(large-desktop) {
+
+  .in {display: none;}
+
+  #work {
+
+    h1 {
+      font-size: 1.6em;
+      margin: 1.2em auto 1.8em;
+      letter-spacing: .1em;
+    }
+
+    p {
+      margin: 0 0 3.5em;
+      font-size: .9em;
+      letter-spacing: .20em;
+    }
+
+    .slider-nav{
+      margin-top: -1px;
+    }
+
+    .slider-for {
+      // outline: yellow solid thin;
+      max-width: 80%;
+      height:35em;
+
+      .dots {
+        // height:1em;
+        top:47em;
       }
 
+      .d-img-wrap {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+        #img-place:nth-child(2) {
+          @include fade-img-large-desktop;
+        }
+        #img-place:nth-child(odd) {
+          height: 15em;
+          width: 25%;
+          // filter: blur(.05em);
+          filter: brightness(.7);
+         }
+
+        .goldway-1 {
+          display: block;
+          background-image:url(../../img/goldway.png);
+        }
+        .cyanfox-1 {
+          display: block;
+          background-image: url(../../img/cyanfox1.png);
+        }
+        .nis-1 {
+          display: block;
+          background-image:url(../../img/nis2.png);
+        }
+        .bbj-1 {
+          display: block;
+          background-image:url(../../img/bb22j.png);
+        }
+        .rhino-1 {
+          display: block;
+          background-image:url(../../img/rhino.png);
+        }
+      }
     }
   }
 };

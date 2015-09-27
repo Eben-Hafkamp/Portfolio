@@ -14,6 +14,7 @@
     <title>EH | Portfolio</title>
 </head>
 <body>
+
     <header class="in">
       <div id="bars">
         <a href="#" class="burger-button goto-burger"></a>
@@ -36,11 +37,20 @@
             </filter>
           </defs>
         </svg> -->
+
+        <!-- <ul id="menu">
+          <li data-menuanchor="one">Home</li>
+          <li data-menuanchor="two">Work</li>
+          <li data-menuanchor="three">Skills</li>
+          <li data-menuanchor="four">Contact</li>
+        </ul> -->
+
     </nav>
     <main>
         <div id="fullpage">
-            <div class="section" id="home">
-                <div class="container">
+
+            <div class="section" id="home" data-anchor="one">
+                <div class="container hide">
                     <div class="move-logo">
                         <div class="eben">
                             <div class="eben-text"><img src="img/eben.png" class="img"></div>
@@ -58,25 +68,27 @@
                 </div>
                <div class="splash"></div>
             </div>
-            <div class="section" id="work">
+            <div class="section" id="work" data-anchor="two">
 
               <section id="slick-content">
 
               <div class="slider-nav">
-                <div><div class="slide-logo"><img src="img/goldway-logo.png" height="20"></div></div>
-                <div><div class="slide-logo"><img src="img/cyanfox-logo2.png" height="20"></div></div>
-                <div><div class="slide-logo"><img src="img/nis-logo3.png" height="20"></div></div>
-                <div><div class="slide-logo"><img src="img/bbj-logo.png" height="20"></div></div>
+                <div><div class="slide-logo"><img src="img/goldway-logo.png" height="15"></div></div>
+                <div><div class="slide-logo"><img src="img/cyanfox-logo2.png" height="15"></div></div>
+                <div><div class="slide-logo"><img src="img/nis-logo3.png" height="15"></div></div>
+                <div><div class="slide-logo"><img src="img/bbj-logo.png" height="15"></div></div>
                 <!-- <div><div class="slide-logo">5</div></div> -->
-                <div><div class="slide-logo"><img src="img/rhino-logo.jpg" height="20"></div></div>
+                <div><div class="slide-logo"><img src="img/rhino-logo.jpg" height="15"></div></div>
               </div>
               <div class="slider-for">
                 <div class="contain-1">
                   <h1>HTML & CSS</h1>
+                  <p class="big-dev-p">A website centered around an international hotel as a first project in my Web Development course.</p>
 
                   <div class="d-img-wrap">
+                    <div id="img-place" class="rhino-1"></div>
                     <div id="img-place" class="goldway"></div>
-                    <div id="img-place" class="goldway-2"></div>
+                    <div id="img-place" class="cyanfox-2"></div>
                   </div>
 
                   <p>A website centered around an international hotel as a first project in my Web Development course.</p>
@@ -85,10 +97,12 @@
                 </div>
                 <div class="contain-2">
                   <h1>PHP from the ground up</h1>
+                  <p class="big-dev-p">Game review site built the classical PHP way containing admins, regular and expert users.</p>
 
                   <div class="d-img-wrap">
+                    <div id="img-place" class="goldway-1"></div>
                     <div id="img-place" class="cyanfox"></div>
-                    <div id="img-place" class="cyanfox-2"></div>
+                    <div id="img-place" class="nis-2"></div>
                   </div>
 
                   <p>Game review site built the classical PHP way containing admins, regular and expert users.</p>
@@ -96,10 +110,12 @@
                 </div>
                 <div class="contain-3">
                   <h1>Responsive SASS & Flexbox</h1>
+                  <p class="big-dev-p">Redesigned and enhanced the responsiveness of a website called netinsites.</p>
 
                   <div class="d-img-wrap">
+                      <div id="img-place" class="cyanfox-1"></div>
                       <div id="img-place" class="nis"></div>
-                      <div id="img-place" class="nis-2"></div>
+                      <div id="img-place" class="bbj-2"></div>
                   </div>
 
                   <p>Redesigned and enhanced the responsiveness of a website called netinsites.</p>
@@ -107,10 +123,12 @@
                 </div>
                 <div class="contain-4">
                   <h1>Design</h1>
+                  <p class="big-dev-p">Created for an artisan (no pun intended) bread company.</p>
 
                   <div class="d-img-wrap">
+                    <div id="img-place" class="nis-1"></div>
                     <div id="img-place" class="bbj"></div>
-                    <div id="img-place" class="bbj-2"></div>
+                    <div id="img-place" class="rhino-2"></div>
                   </div>
 
                   <p>Created for an artisan (no pun intended) bread company.</p>
@@ -125,10 +143,12 @@
 
                 <div class="contain-6">
                   <h1>Classical OOP</h1>
+                  <p class="big-dev-p">Project on a retailer of records. Website has a functional shopping cart.</p>
 
                   <div class="d-img-wrap">
+                    <div id="img-place" class="bbj-1"></div>
                     <div id="img-place" class="rhino"></div>
-                    <div id="img-place" class="rhino-2"></div>
+                    <div id="img-place" class="goldway-2"></div>
                   </div>
 
 
@@ -137,7 +157,7 @@
                 </div>
               </div>
             </div>
-            <div class="section" id="skills">
+            <div class="section" id="skills" data-anchor="three">
               <h1>About My Code</h1>
                <p>Some of my core skills include:</p>
                <div class="skills-wrapper">
@@ -162,7 +182,7 @@
                  <img src="img/icon-adobe.png" height="40">
                </div>
                <div id="Animation-front">
-                <span>I'm a</span>
+                <span class="ima">I'm a</span>
                 <b>
                  <span class="moving-text">
                   &nbsp; lover of code<br />
@@ -173,19 +193,28 @@
                 </b>
               </div>
             </div>
-            <div class="section" id="contact">
+            <div class="section" id="contact" data-anchor="four">
                <h1>Contact</h1>
                <p>If you want to catch up for a coffee or just want to get in touch, please leave me a message.</p>
-               <form id="form" class="topBefore">
-                <input id="name" type="text" placeholder="NAME">
-                <input id="email" type="text" placeholder="E-MAIL">
-                <textarea id="message" type="text" placeholder="MESSAGE"></textarea>
-                <input id="submit" type="submit" value="SEND!">
-              </form>
-                <div class="me-thumb">
 
+               <form method="#" class='message'>
+                 <input name='name' placeholder='Name' type='text'>
+                 <input name='email' placeholder='E-Mail Address' type='text'>
+                 <textarea row="15" name='message' placeholder='Message' type='text'></textarea>
+                 <input type='submit' value='Send'>
+               </form>
+
+                <div class="me-links">
+                  <div class="avatar">
+
+                  </div>
+                  <div class="social-icons">
+                    <img src="img/social-fb.png">
+                    <img src="img/social-linkedin.png">
+                    <img src="img/social-behance.png">
+                    <img src="img/social-codepen.png">
+                  </div>
                 </div>
-                <span>Copyright</span>
             </div>
         </div>
     </main>

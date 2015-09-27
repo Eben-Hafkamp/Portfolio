@@ -66,12 +66,12 @@ $(function() {
 
 // ---------------- MOUSE SCROLL KEYFRAMES INTRO
 
-    // setTimeout(function(){
-    //     $('.mouse').addClass('show').addClass('animated fadeIn');
-    // }, 2000);
-    // setTimeout(function(){
-    //     $('.mouse').addClass('animated fadeOut');
-    // }, 6000);
+    setTimeout(function(){
+        $('.mouse').addClass('show').addClass('animated fadeIn');
+    }, 4000);
+    setTimeout(function(){
+        $('.mouse').addClass('animated fadeOut');
+    }, 8000);
 
 // ---------------- FIXED NAVIGATION BAR MOBILE PHONE
 
@@ -81,9 +81,9 @@ setTimeout(function(){
 
 // ---------------- LOGO INTRO
 
-// setTimeout(function(){
-//     $('.logo-bar').removeClass('hide');
-// }, 0);
+setTimeout(function(){
+    $('.container').removeClass('hide');
+}, 1000);
 
 // ---------------- FORM USABILITY ON MOBILE PHONE
 

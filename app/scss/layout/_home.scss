@@ -13,21 +13,20 @@
         .move-logo {
           // outline: pink solid thin;
             position: absolute;
-            left: -3.4em;
-            top: -1.9em;
+            left: -3.2em;
+            top: -1.7em;
         }
 
         .move-logo img {height: 1.5em;}
 
-        .bar-wrap {padding-right: 3em;}
+        .bar-wrap {padding-right: 2.7em;}
         .logo-bar {
             height: 2px;
-            width: 3.4em;
+            width: 3.2em;
             background-color: #fff;
             z-index: 999;
             transform: rotate(135deg);
             animation: expand 1500ms;
-            animation-delay: 500ms;
             transform-origin: 50% 50%;
             margin: auto;
         }
@@ -63,7 +62,7 @@
         }
         .hafkamp {
             vertical-align: -80%;
-            margin-top: -1em;
+            margin-top: .3em;
             margin-left: 5.3em;
             overflow: hidden;
             display: inline-block;
@@ -72,12 +71,10 @@
         .eben-text {
             margin-left: 0em;
             animation: eben-slide 2000ms;
-            animation-delay: 500ms;
         }
         .hafkamp-text {
             margin-left: 0em;
             animation: hafkamp-slide 2000ms;
-            animation-delay: 500ms;
         }
         @keyframes eben-slide {
             0% {
@@ -112,42 +109,152 @@
             }
         }
     }
-//     .mouse {
-//       width: 2em;
-//       height: 3em;
-//       margin: 5em auto;
-//       border: #e6e6e6 thin solid;
-//       border-radius: 300px;
-//         display: none;
-//     }
-//
-//     .mouse-wheel {
-//         width: .4em;
-//         height: .5em;
-//         margin: .5em auto;
-//         background: #cdcdcd;
-//         border-radius: 300px;
-//         animation: down 4000ms;
-// //        animation-delay: 2s;
-//     }
-//
-//     @keyframes down {
-//       0% {margin: .5em auto;}
-//       10% {margin: .8em auto;}
-//       20% {margin: .5em auto;}
-//       30% {margin: .8em auto;}
-//       40% {margin: .5em auto;}
-//       50% {margin: .8em auto;}
-//       60% {margin: .5em auto;}
-//       70% {margin: .8em auto;}
-//       80% {margin: .5em auto;}
-//       90% {margin: .8em auto;}
-//       100% {margin: .5em auto;}
-//     }
-//
-// //    .hide-mouse {display: none;}
-//     .show {display: block;}
+    .mouse {
+      width: 2em;
+      height: 3em;
+      margin: 5em auto;
+      border: #e6e6e6 thin solid;
+      border-radius: 300px;
+        display: none;
+    }
+
+    .mouse-wheel {
+        width: .4em;
+        height: .5em;
+        margin: .5em auto;
+        background: #cdcdcd;
+        border-radius: 300px;
+        animation: down 4000ms;
+
+    }
+
+    @keyframes down {
+      0% {margin: .5em auto;}
+      10% {margin: .8em auto;}
+      20% {margin: .5em auto;}
+      30% {margin: .8em auto;}
+      40% {margin: .5em auto;}
+      50% {margin: .8em auto;}
+      60% {margin: .5em auto;}
+      70% {margin: .8em auto;}
+      80% {margin: .5em auto;}
+      90% {margin: .8em auto;}
+      100% {margin: .5em auto;}
+    }
+
+//    .hide-mouse {display: none;}
+    .show {display: block;}
 }
+
+@include respond-to(large-desktop) {
+  #home {
+    .container {
+      width: 9em;
+      position: relative;
+      margin: 9em auto 1em;
+
+      .move-logo img {height: 2.41em;}
+
+      .move-logo {
+        position: absolute;
+        left: -1.8em;
+        top: -1.9em;
+      }
+
+      .bar-wrap {padding-right: 0;}
+      .logo-bar {
+        height: .16em;
+        width: 5.8em;
+        background-color: #fff;
+        z-index: 999;
+        transform: rotate(135deg);
+        animation: expand 1500ms;
+        transform-origin: 50% 50%;
+        margin: auto;
+      }
+
+      @keyframes expand {
+        0% {
+          width: 2px;
+        }
+        25% {
+          width: 2px;
+        }
+        30% {
+          width: 2px;
+          transform: rotate(90deg);
+        }
+        50% {
+          width: 100px;
+          transform: rotate(90deg);
+        }
+        100% {
+          width: 100px;
+          transform: rotate(135deg);
+        }
+      }
+
+      .eben {
+        overflow: hidden;
+        display: inline-block;
+        margin-bottom: -.5em;
+        margin-left: 0;
+      }
+
+      .hafkamp {
+        vertical-align: -80%;
+        margin-top: -1em;
+        margin-left: 5.3em;
+        overflow: hidden;
+        display: inline-block;
+      }
+
+      .eben-text {
+        margin-left: 0em;
+        animation: eben-slide 2000ms;
+      }
+
+      .hafkamp-text {
+        margin-left: 0em;
+        animation: hafkamp-slide 2000ms;
+      }
+
+      @keyframes eben-slide {
+        0% {
+          margin-left: 4em;
+          opacity: 0;
+        }
+        60% {
+          margin-left: 4em;
+          opacity: 0;
+        }
+        70% {
+          opacity: 0;
+        }
+        100% {
+          left: 0;
+        }
+      }
+
+      @keyframes hafkamp-slide {
+        0% {
+          margin-left: -8em;
+          opacity: 0;
+        }
+        60% {
+          margin-left: -8em;
+          opacity: 0;
+        }
+        70% {
+          opacity: 0;
+        }
+        100% {
+          left: 0;
+        }
+      }
+    }
+  }
+};
 
 //.splash {
 //    display: flex;

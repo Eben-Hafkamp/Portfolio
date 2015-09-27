@@ -2,7 +2,7 @@ $breakpoints: (
   'tablet-portrait'  : 46em,
   'tablet'  : 46em,
   'small-desktop' : 70em,
-  'large-desktop'  : 82em
+  'large-desktop'  : 110em
 );
 
 @mixin respond-to($breakpoint) {
@@ -55,4 +55,15 @@ $breakpoints: (
   position: relative;
   background-size:cover;
   background-position: 50% 0%;
+}
+
+@mixin fade-img-large-desktop {
+  // outline: yellow thin solid;
+  margin: auto;
+  height:30em;
+  width:55%;
+  position: relative;
+  background-size:cover;
+  background-position: 50% 0%;
+  box-shadow: -2px -37px 160px -52px rgba(0,0,0,0.75);
 }

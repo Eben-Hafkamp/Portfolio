@@ -25,7 +25,7 @@
   }
 
   img {
-    margin: 1.5em 0 1.5em;
+    margin: 1.5em 0;
   }
 
   #Animation-front{
@@ -44,7 +44,7 @@
       line-height: 1.7em;
       float: left;
     }
-    span{
+    .ima{
       height: 50px;
       float: left;
       white-space: nowrap;
@@ -97,6 +97,33 @@
   // }
 }
 
-// @media only screen and (min-width : 54em) {
-//   #skills {padding-top: 7em;}
-// }
+@include respond-to(tablet) {
+  #skills {
+    h1 {font-size: 1.3em; margin: 1em auto 1em;}
+    p {font-size: .9em; letter-spacing: .15em; margin-bottom: 1em;}
+    img {margin: 2em;}
+    #Animation-front{width: 5.5em; height: 2em; margin: 1em auto;}
+  }
+};
+
+@include respond-to(small-desktop) {
+  #skills {
+    h1 {font-size: 1.6em; margin: 1em auto 1em;}
+    span {font-size: 1.2em; letter-spacing: .15em}
+    img {margin: 2em; height:50px}
+    #Animation-front{width: 5.5em; height: 2em; margin: 1em auto;}
+    .ima {font-size:1em; letter-spacing: 0;}
+  }
+};
+
+@include respond-to(large-desktop) {
+  #skills {
+    padding: 4em 15em 0;
+    h1 {font-size: 1.6em; margin: 1em auto 1em;}
+    p {font-size: .9em; letter-spacing: .15em; margin:3em 0 3em;}
+    span {font-size: 1.2em; letter-spacing: .15em}
+    img {margin: 2em; height:50px}
+    #Animation-front{margin: 2.5em auto;}
+    .ima {font-size:1em; letter-spacing: 0;}
+  }
+};
