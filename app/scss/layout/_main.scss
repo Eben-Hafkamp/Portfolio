@@ -6,6 +6,11 @@ main {
 
 .fp-tableCell {z-index: -2000;}
 
+#fp-nav ul li a span, .fp-slidesNav ul li a span {
+  display: none;
+    background: white;
+}
+
 h1 {
   font-size:1.2em;
   font-family:$font-stack;
@@ -21,3 +26,23 @@ p {
   line-height: 1.6em;
   color: white;
 }
+
+.fp-controlArrow {display: none;}
+
+@include respond-to(tablet) {
+  h1 { font-size: 1.3em; margin: 1em auto 1em; }
+  p { font-size: .9em; letter-spacing: .15em; }
+};
+
+@include respond-to(small-desktop) {
+  h1 { font-size: 1.6em; margin: 1em auto 1.4em; }
+  .in {display: none;}
+  #fp-nav ul li a span, .fp-slidesNav ul li a span {
+      display: block;
+  }
+};
+
+@include respond-to(large-desktop) {
+  h1 { font-size: 1.6em; margin: 1em auto 1em; letter-spacing: .1em;}
+  p { font-size: .9em; letter-spacing: .15em; }
+};

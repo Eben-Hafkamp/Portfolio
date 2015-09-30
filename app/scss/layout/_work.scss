@@ -146,22 +146,17 @@
   #work {
     padding-top: 2em;
 
-    h1 {
-      font-size: 1.3em;
-      margin: 1em auto 1em;
-    }
-
     p {
       display: none;
     }
 
-    .big-dev-p {display: block; padding:0em 2em 1em; font-size: .9em; letter-spacing: .15em;}
+    .big-dev-p {display: block; padding:0em 2em 1em;}
 
     .slider-nav {
       width: 75vw;
 
       .slide-logo{
-        padding: 1.5em 0;
+        padding: 1.1em 0;
       }
 
       .slide-logo img {height:22px;}
@@ -215,20 +210,10 @@
   #work {
     padding-top: 2em;
 
-    h1 {
-      font-size: 1.6em;
-      margin: 1em auto 1.4em;
-    }
-
-    p {
-      padding:4em 0em;
-      font-size: .9em;
-      letter-spacing: .15em;
-    }
+    p { padding:4em 0em; }
 
     #img-place {@include fade-img-small-desktop;}
     .dots {
-      // outline: pink solid thin;
       top:35em;
     }
 
@@ -237,7 +222,6 @@
     }
 
     .slider-for {
-      // outline: yellow solid thin;
       max-width: 80%;
       height:35em;
 
@@ -273,33 +257,21 @@
 
 @include respond-to(large-desktop) {
 
-  .in {display: none;}
-
   #work {
 
-    h1 {
-      font-size: 1.6em;
-      margin: 1.2em auto 1.8em;
-      letter-spacing: .1em;
-    }
+    h1 { margin: 1.2em auto 1.8em; }
 
-    p {
-      margin: 0 0 3.5em;
-      font-size: .9em;
-      letter-spacing: .20em;
-    }
+    p { margin: 0 0 3.5em; }
 
     .slider-nav{
       margin-top: -1px;
     }
 
     .slider-for {
-      // outline: yellow solid thin;
       max-width: 80%;
       height:35em;
 
       .dots {
-        // height:1em;
         top:47em;
       }
 

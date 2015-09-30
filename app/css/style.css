@@ -787,7 +787,17 @@ header .cv {
   background: -webkit-radial-gradient(center, ellipse cover, #474747 0%, #1c1c1c 100%);
   text-align: center;
   padding-top: 4em;
-  /*for tablet landscape - inclusive*/
+}
+#skills .fp-tableCell {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 #skills .skills-wrapper {
   display: -webkit-box;
@@ -828,7 +838,25 @@ header .cv {
 #skills img {
   margin: 1.5em 0;
 }
+#skills button {
+  margin: 6em;
+  padding: .8em 1.4em;
+  color: white;
+  background: -webkit-linear-gradient(top, #2c2c2c 0%, #131313 100%);
+  background: linear-gradient(to bottom, #2c2c2c 0%, #131313 100%);
+  border: #474747 thin solid;
+  outline: 0;
+  font-family: Helvetica, Century Gothic, Arial;
+  letter-spacing: .2em;
+  font-size: 12px;
+  cursor: pointer;
+}
+#skills svg {
+  margin: 3em auto;
+  background: whitesmoke;
+}
 #skills #Animation-front {
+  display: none;
   width: 5.5em;
   height: 2em;
   margin: .5em auto;
@@ -909,13 +937,7 @@ header .cv {
   }
 }
 @media (min-width: 46em) {
-  #skills h1 {
-    font-size: 1.3em;
-    margin: 1em auto 1em;
-  }
   #skills p {
-    font-size: .9em;
-    letter-spacing: .15em;
     margin-bottom: 1em;
   }
   #skills img {
@@ -928,10 +950,6 @@ header .cv {
   }
 }
 @media (min-width: 70em) {
-  #skills h1 {
-    font-size: 1.6em;
-    margin: 1em auto 1em;
-  }
   #skills span {
     font-size: 1.2em;
     letter-spacing: .15em;
@@ -954,13 +972,7 @@ header .cv {
   #skills {
     padding: 4em 15em 0;
   }
-  #skills h1 {
-    font-size: 1.6em;
-    margin: 1em auto 1em;
-  }
   #skills p {
-    font-size: .9em;
-    letter-spacing: .15em;
     margin: 3em 0 3em;
   }
   #skills span {
@@ -1149,24 +1161,18 @@ header .cv {
   #work {
     padding-top: 2em;
   }
-  #work h1 {
-    font-size: 1.3em;
-    margin: 1em auto 1em;
-  }
   #work p {
     display: none;
   }
   #work .big-dev-p {
     display: block;
     padding: 0em 2em 1em;
-    font-size: .9em;
-    letter-spacing: .15em;
   }
   #work .slider-nav {
     width: 75vw;
   }
   #work .slider-nav .slide-logo {
-    padding: 1.5em 0;
+    padding: 1.1em 0;
   }
   #work .slider-nav .slide-logo img {
     height: 22px;
@@ -1213,14 +1219,8 @@ header .cv {
   #work {
     padding-top: 2em;
   }
-  #work h1 {
-    font-size: 1.6em;
-    margin: 1em auto 1.4em;
-  }
   #work p {
     padding: 4em 0em;
-    font-size: .9em;
-    letter-spacing: .15em;
   }
   #work #img-place {
     margin: auto;
@@ -1276,19 +1276,11 @@ header .cv {
   }
 }
 @media (min-width: 110em) {
-  .in {
-    display: none;
-  }
-
   #work h1 {
-    font-size: 1.6em;
     margin: 1.2em auto 1.8em;
-    letter-spacing: .1em;
   }
   #work p {
     margin: 0 0 3.5em;
-    font-size: .9em;
-    letter-spacing: .20em;
   }
   #work .slider-nav {
     margin-top: -1px;
@@ -1355,33 +1347,39 @@ header .cv {
 }
 
 #contact {
-  background: -webkit-linear-gradient(45deg, #e6c89c 0%, #b68d4c 100%);
-  background: linear-gradient(45deg, #e6c89c 0%, #b68d4c 100%);
+  background: -webkit-linear-gradient(315deg, #e0b982 0%, #b68d4c 100%);
+  background: linear-gradient(135deg, #e0b982 0%, #b68d4c 100%);
   text-align: center;
   padding-top: 4em;
 }
 #contact p {
-  padding: 1em 1.5em;
+  display: none;
 }
-#contact h2 {
+#contact h1 {
+  margin: 0 auto 1em;
   color: #e6c89c;
   font-family: 'Sofia', cursive;
-  font-size: 15px;
+  font-size: 2em;
   font-weight: bold;
-  font-size: 3.6em;
-  text-align: center;
-  margin-bottom: 20px;
 }
 #contact a {
   color: #435160;
   text-decoration: none;
 }
 #contact .message {
-  width: 20em;
+  width: 95vw;
   margin: 1em auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 #contact textarea {
-  width: 24.5em;
   height: 5em;
   padding: 20px 0px;
   background: transparent;
@@ -1392,8 +1390,10 @@ header .cv {
   font-size: 1em;
   resize: none;
 }
+#contact textarea:focus {
+  border-bottom: 1px solid #88ace1;
+}
 #contact input[type="text"] {
-  width: 20em;
   padding: .6em 0;
   background: transparent;
   border: 0;
@@ -1402,11 +1402,13 @@ header .cv {
   color: #e6c89c;
   font-size: 1em;
 }
+#contact input[type="text"]:focus {
+  border-bottom: 1px solid #88ace1;
+}
 #contact input[type="submit"] {
   margin-top: 1em;
-  background: #9cbae6;
+  background: #88ace1;
   border: 0;
-  width: 26.7em;
   height: 40px;
   border-radius: 3px;
   color: #fff;
@@ -1416,7 +1418,7 @@ header .cv {
           transition: background .3s ease-in-out;
 }
 #contact input[type="submit"]:hover {
-  background: #9ce6c8;
+  background: #e188ac;
 }
 #contact ::-webkit-input-placeholder {
   color: #e6c89c;
@@ -1451,12 +1453,38 @@ header .cv {
       -ms-flex: 1 0 1;
           flex: 1 0 1;
 }
+#contact .me-links .social-icons img:nth-child(-n+3) {
+  box-shadow: inset 0 0 8px #000000;
+}
 #contact span {
   color: white;
   font-family: arial;
   font-size: .5em;
 }
 
+@media (min-width: 46em) {
+  #contact h1 {
+    margin: 1em auto 1em;
+    font-size: 3em;
+  }
+  #contact .message {
+    width: 45em;
+    margin: 3em auto 5em;
+  }
+  #contact .message input[type="text"] {
+    padding: 1.25em 0;
+  }
+  #contact .message textarea {
+    height: 10em;
+  }
+}
+@media (min-width: 110em) {
+  #contact p {
+    display: block;
+    margin-top: 7em;
+    color: #e6c89c;
+  }
+}
 main {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1472,6 +1500,11 @@ main {
 
 .fp-tableCell {
   z-index: -2000;
+}
+
+#fp-nav ul li a span, .fp-slidesNav ul li a span {
+  display: none;
+  background: white;
 }
 
 h1 {
@@ -1490,6 +1523,47 @@ p {
   color: white;
 }
 
+.fp-controlArrow {
+  display: none;
+}
+
+@media (min-width: 46em) {
+  h1 {
+    font-size: 1.3em;
+    margin: 1em auto 1em;
+  }
+
+  p {
+    font-size: .9em;
+    letter-spacing: .15em;
+  }
+}
+@media (min-width: 70em) {
+  h1 {
+    font-size: 1.6em;
+    margin: 1em auto 1.4em;
+  }
+
+  .in {
+    display: none;
+  }
+
+  #fp-nav ul li a span, .fp-slidesNav ul li a span {
+    display: block;
+  }
+}
+@media (min-width: 110em) {
+  h1 {
+    font-size: 1.6em;
+    margin: 1em auto 1em;
+    letter-spacing: .1em;
+  }
+
+  p {
+    font-size: .9em;
+    letter-spacing: .15em;
+  }
+}
 #menu {
   width: 1em;
   height: 100vh;

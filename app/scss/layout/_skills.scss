@@ -3,6 +3,8 @@
   text-align: center;
   padding-top: 4em;
 
+  .fp-tableCell {display: flex; flex-direction: column;}
+
   .skills-wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -28,8 +30,27 @@
     margin: 1.5em 0;
   }
 
+  button {
+    margin: 6em;
+    padding:.8em 1.4em;
+    color: white;
+    background: linear-gradient(to bottom, rgba(44,44,44,1) 0%, rgba(19,19,19,1) 100%);
+    border: #474747 thin solid;
+    outline:0;
+    font-family: $font-stack;
+    letter-spacing: .2em;
+    font-size: 12px;
+    cursor: pointer;
+  }
+
+  svg {
+    margin: 3em auto;
+    background: whitesmoke;
+  }
+
   #Animation-front{
     // outline: 1px red solid;
+    display: none;
     width: 5.5em;
     height: 2em;
     margin: .5em auto;
@@ -73,34 +94,11 @@
     }
   }
 
-  /*for tablet landscape - inclusive*/
-  // @media only screen and (min-width : 54em) {
-  //   h1 {font-size: 30px;}
-  //   p {font-size: 18px;}
-  //   span {font-size: 20px;}
-  //   img {height: 50px;}
-  //   #Animation-front{
-  //   width:15em;
-  //   height: 2em;
-  //   margin: 1em auto;
-  //   font: normal 40px/50px 'Raleway', sans-serif;
-  //   color: #999;
-  //
-  //     span{
-  //       height: 20px;
-  //       font-size: 55px;
-  //     }
-  //     .moving-text {
-  //       font-size: 45px;
-  //     }
-  //   }
-  // }
 }
 
 @include respond-to(tablet) {
   #skills {
-    h1 {font-size: 1.3em; margin: 1em auto 1em;}
-    p {font-size: .9em; letter-spacing: .15em; margin-bottom: 1em;}
+    p {margin-bottom: 1em;}
     img {margin: 2em;}
     #Animation-front{width: 5.5em; height: 2em; margin: 1em auto;}
   }
@@ -108,7 +106,6 @@
 
 @include respond-to(small-desktop) {
   #skills {
-    h1 {font-size: 1.6em; margin: 1em auto 1em;}
     span {font-size: 1.2em; letter-spacing: .15em}
     img {margin: 2em; height:50px}
     #Animation-front{width: 5.5em; height: 2em; margin: 1em auto;}
@@ -119,8 +116,7 @@
 @include respond-to(large-desktop) {
   #skills {
     padding: 4em 15em 0;
-    h1 {font-size: 1.6em; margin: 1em auto 1em;}
-    p {font-size: .9em; letter-spacing: .15em; margin:3em 0 3em;}
+    p {margin:3em 0 3em;}
     span {font-size: 1.2em; letter-spacing: .15em}
     img {margin: 2em; height:50px}
     #Animation-front{margin: 2.5em auto;}

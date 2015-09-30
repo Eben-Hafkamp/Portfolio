@@ -7,9 +7,9 @@
     <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css" rel="stylesheet"/> -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="slickDir/slick/slick-theme.css">
+    <link href='http://fonts.googleapis.com/css?family=Sofia' rel='stylesheet' type='text/css'>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script type="text/javascript">
-    </script>
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
     <title>EH | Portfolio</title>
 </head>
@@ -24,10 +24,10 @@
     <nav>
         <div class="sidebar hide">
             <ul>
-                <li><img src="img/arroba.png" class="" height="35"><span>CONTACT</span></li>
-                <li><img src="img/work.png" class="" height="35"><span>WORK<span></li>
-                <li><img src="img/about.png" class="" height="35"><span>SKILLS</span></li>
-                <li><img src="img/calendar.png" class="" height="35"><span>AVAILABLE</span></li>
+                <li><a href="#one"><img src="img/top.png" class="" height="35"><span>TOP</span></a></li>
+                <li><a href="#two"><img src="img/work.png" class="" height="35"><span>WORK<span></a></li>
+                <li><a href="#three"><img src="img/about.png" class="" height="35"><span>SKILLS</span></a></li>
+                <li><a href="#four"><img src="img/arroba.png" class="" height="35"><span>CONTACT</span></a></li>
             </ul>
         </div>
         <!-- <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
@@ -49,7 +49,7 @@
     <main>
         <div id="fullpage">
 
-            <div class="section" id="home" data-anchor="one">
+            <div class="section" id="home">
                 <div class="container hide">
                     <div class="move-logo">
                         <div class="eben">
@@ -66,9 +66,14 @@
                 <div class="mouse">
                     <div class="mouse-wheel"></div>
                 </div>
+                <p class="about">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                  in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                </p>
                <div class="splash"></div>
             </div>
-            <div class="section" id="work" data-anchor="two">
+            <div class="section" id="work">
 
               <section id="slick-content">
 
@@ -157,64 +162,81 @@
                 </div>
               </div>
             </div>
-            <div class="section" id="skills" data-anchor="three">
-              <h1>About My Code</h1>
-               <p>Some of my core skills include:</p>
-               <div class="skills-wrapper">
-                  <span>HTML</span>
-                  <span>Sass</span>
-                  <span>jQuery</span>
-                  <span>PHP SQL</span>
-                  <img src="img/icon-html.png" height="40">
-                  <img src="img/icon-sass.png" height="40">
-                  <img src="img/icon-jquery.png" height="40">
-                  <img src="img/icon-php.png" height="40">
-               </div>
-               <p>I can use the following tools and frameworks:</p>
-               <div class="tools-wrapper">
-                 <span>GitHub</span>
-                 <span>Gulp</span>
-                 <span>Laravel</span>
-                 <span>Adobe</span>
-                 <img src="img/icon-git.png" height="40">
-                 <img src="img/icon-gulp.png" height="40">
-                 <img src="img/icon-laravel.png" height="40">
-                 <img src="img/icon-adobe.png" height="40">
-               </div>
-               <div id="Animation-front">
-                <span class="ima">I'm a</span>
-                <b>
-                 <span class="moving-text">
-                  &nbsp; lover of code<br />
-                  &nbsp; music natzi<br />
-                  &nbsp; pepperoni fan <br />
-                  &nbsp; sassquatch
-                 </span>
-                </b>
+            <div class="section" id="skills">
+              <div class="slide">
+                <h1>About My Code</h1>
+                 <p>Some of my core skills include:</p>
+                 <div class="skills-wrapper">
+                    <span>HTML</span>
+                    <span>Sass</span>
+                    <span>jQuery</span>
+                    <span>PHP SQL</span>
+                    <img src="img/icon-html.png" height="40">
+                    <img src="img/icon-sass.png" height="40">
+                    <img src="img/icon-jquery.png" height="40">
+                    <img src="img/icon-php.png" height="40">
+                 </div>
+                 <p>I can use the following tools and frameworks:</p>
+                 <div class="tools-wrapper">
+                   <span>GitHub</span>
+                   <span>Gulp</span>
+                   <span>Laravel</span>
+                   <span>Adobe</span>
+                   <img src="img/icon-git.png" height="40">
+                   <img src="img/icon-gulp.png" height="40">
+                   <img src="img/icon-laravel.png" height="40">
+                   <img src="img/icon-adobe.png" height="40">
+                 </div>
+                 <a href="#three/1">
+                   <button>View Skills Graph</button>
+                 </a>
+                 <div id="Animation-front">
+                  <span class="ima">I'm a</span>
+                  <b>
+                   <span class="moving-text">
+                    &nbsp; lover of code<br />
+                    &nbsp; music natzi<br />
+                    &nbsp; pepperoni fan <br />
+                    &nbsp; sassquatch
+                   </span>
+                  </b>
+                </div>
+              </div>
+              <div class="slide">
+                <h1>Hello</h1>
+                <svg id="skillGraph"></svg>
+                <a href="#three">
+                  <button>&#10092; Back</button>
+                </a>
               </div>
             </div>
-            <div class="section" id="contact" data-anchor="four">
-               <h1>Contact</h1>
-               <p>If you want to catch up for a coffee or just want to get in touch, please leave me a message.</p>
+              <div class="section" id="contact">
+                 <h1>Contact</h1>
 
-               <form method="#" class='message'>
-                 <input name='name' placeholder='Name' type='text'>
-                 <input name='email' placeholder='E-Mail Address' type='text'>
-                 <textarea row="15" name='message' placeholder='Message' type='text'></textarea>
-                 <input type='submit' value='Send'>
-               </form>
+                 <form method="#" class='message'>
+                   <input name='name' placeholder='Name' type='text'>
+                   <input name='email' placeholder='E-Mail Address' type='text'>
+                   <textarea row="15" name='message' placeholder='Message' type='text'></textarea>
+                   <input type='submit' value='Send'>
+                 </form>
 
-                <div class="me-links">
-                  <div class="avatar">
+                 <!-- <p>If you want to catch up for a coffee or just want to get in touch, please leave me a message.</p> -->
 
+                  <div class="me-links">
+                    <div class="avatar">
+
+                    </div>
+                    <div class="social-icons">
+                      <img src="img/social-fb.png">
+                      <img src="img/social-linkedin.png">
+                      <img src="img/social-behance.png">
+                      <img src="img/social-codepen.png">
+                    </div>
                   </div>
-                  <div class="social-icons">
-                    <img src="img/social-fb.png">
-                    <img src="img/social-linkedin.png">
-                    <img src="img/social-behance.png">
-                    <img src="img/social-codepen.png">
-                  </div>
-                </div>
+
+                  <p>| &nbsp Download my CV &nbsp |</p>
+
+              </div>
             </div>
         </div>
     </main>
