@@ -150,6 +150,58 @@ var data = [
         'height': function (d) { return height - yScale(d.num) }
       })
 
+// VOICE CONTROL
+if (annyang) {
+
+	  var commands = {
+	    'down': function(){
+        $.fn.fullpage.moveSectionDown();
+      },
+
+			'up': function(){
+        $.fn.fullpage.moveSectionUp();
+      },
+
+      'right': function(){
+        $.fn.fullpage.moveSlideRight();
+      },
+
+      'left': function(){
+        $.fn.fullpage.moveSlideLeft();
+      }
+
+	  };
+
+	  // Add our commands to annyang
+	  annyang.addCommands(commands);
+
+	  // Start listening.
+	  annyang.start();
+}
+
+
+
+
+
+
+// document.keydown = function(e){
+//   switch(e.which) {
+//     case 37:
+//
+//     break;
+//     case 38:
+//
+//     break;
+//     case 39:
+//
+//     break;
+//     case 40:
+//
+//     break;
+//     default: return;
+//   }
+//   e.preventDefault();
+// };
 
 
 
