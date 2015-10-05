@@ -264,7 +264,7 @@ header #bars .goto-cross:after {
 }
 header .cv {
   margin: auto 1em;
-  font-family: Helvetica, Century Gothic, Arial;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-size: 1em;
   letter-spacing: .5em;
   color: white;
@@ -317,7 +317,7 @@ header .cv {
   width: 8em;
   margin-top: 2em;
   border-bottom: thin rgba(0, 0, 255, 0.1) solid;
-  font-family: Helvetica, Century Gothic, Arial;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   line-height: 4em;
   text-align: center;
   font-size: .5em;
@@ -357,7 +357,61 @@ header .cv {
       -ms-flex-direction: column;
           flex-direction: column;
   z-index: -2000;
-  background-image: url("../../img/space-repeating1.png");
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #1e5799), color-stop(100%, #7db9e8));
+}
+#home .fp-tableCell {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+#home .img-stack {
+  -webkit-transform: rotate(350deg);
+      -ms-transform: rotate(350deg);
+          transform: rotate(350deg);
+}
+#home .index-wrap {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  outline: red solid thin;
+}
+#home .index-wrap .in-wrap {
+  outline: pink solid thin;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 5%;
+      -ms-flex: 1 0 5%;
+          flex: 1 0 5%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+#home .index-wrap .in-wrap div {
+  width: 5em;
+  height: 3em;
+  margin-right: 1em;
+  border-right: thin solid white;
+}
+#home .index-wrap .img-stack {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 20%;
+      -ms-flex: 1 0 20%;
+          flex: 1 0 20%;
+  height: 20em;
+  background-image: url(../../img/cyanfox-flat.png);
+  background-size: cover;
 }
 #home .container {
   width: 8em;
@@ -529,7 +583,12 @@ header .cv {
 #home .mouse {
   width: 2em;
   height: 3em;
-  margin: 5em auto;
+  position: absolute;
+  top: 10em;
+  left: 0;
+  right: 0;
+  margin-right: auto;
+  margin-left: auto;
   border: #e6e6e6 thin solid;
   border-radius: 300px;
   display: none;
@@ -833,7 +892,7 @@ header .cv {
           flex: 1 0 25%;
   color: white;
   font-size: 1em;
-  font-family: Helvetica, Century Gothic, Arial;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 #skills img {
   margin: 1.5em 0;
@@ -846,14 +905,20 @@ header .cv {
   background: linear-gradient(to bottom, #2c2c2c 0%, #131313 100%);
   border: #474747 thin solid;
   outline: 0;
-  font-family: Helvetica, Century Gothic, Arial;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   letter-spacing: .2em;
   font-size: 12px;
   cursor: pointer;
 }
 #skills svg {
   margin: 3em auto;
-  background: whitesmoke;
+  background: transparent;
+}
+#skills .axis line,
+#skills .axis path {
+  fill: none;
+  stroke: white;
+  shape-rendering: crispEdges;
 }
 #skills #Animation-front {
   display: none;
@@ -1313,7 +1378,7 @@ header .cv {
     position: relative;
     background-size: cover;
     background-position: 50% 0%;
-    box-shadow: -2px -37px 160px -52px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px -49px 89px -58px rgba(0, 0, 0, 0.75);
   }
   #work .slider-for .d-img-wrap #img-place:nth-child(odd) {
     height: 15em;
@@ -1358,7 +1423,7 @@ header .cv {
 #contact h1 {
   margin: 0 auto 1em;
   color: #e6c89c;
-  font-family: 'Sofia', cursive;
+  font-family: sofia, cursive;
   font-size: 2em;
   font-weight: bold;
 }
@@ -1485,6 +1550,10 @@ header .cv {
     color: #e6c89c;
   }
 }
+@font-face {
+  font-family: sofia;
+  src: url(../../fonts/Sofia-Regular.otf);
+}
 main {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1509,14 +1578,16 @@ main {
 
 h1 {
   font-size: 1.2em;
-  font-family: Helvetica, Century Gothic, Arial;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 100;
   color: white;
 }
 
 p {
   margin-bottom: 1.5em;
   padding: 2em 2em;
-  font-family: Helvetica, Century Gothic, Arial;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: lighter;
   font-size: .8em;
   letter-spacing: .1em;
   line-height: 1.6em;

@@ -89,9 +89,11 @@ setTimeout(function(){
 
 // ---------------- D3 SKILLS GRAPH
 
+$('#run').on('click', function() {
+
 // mbostock margin convention
-var margin = { top: 20, right:10, bottom:100, left: 40 },
-    width = 700 - margin.right - margin.left,
+var margin = { top: 20, right:10, bottom:20, left: 40 },
+    width = 1000 - margin.right - margin.left,
     height = 500 - margin.top - margin.bottom;
 
 //g element is a container used to group objects. transformations applied to the g element are performed on all of its child elements.
@@ -104,7 +106,7 @@ var svg = d3.select('#skillGraph')
       .attr("transform", "translate(" + margin.left + ',' + margin.right + ')');
 
 var xScale = d3.scale.ordinal()
-    .rangeRoundBands([0,width], 0.2, 0.2);
+    .rangeRoundBands([0,width], 0.4, 0.4);
 
 var yScale = d3.scale.linear()
     .range([height, 0]);
@@ -119,92 +121,97 @@ var yAxis = d3.svg.axis()
 
 
 var data = [
-    {skill:"PHP", value:50},
-    {skill:"CSS", value:90},
-    {skill:"HTML", value:70},
-    {skill:"JS", value:60},
-    {skill:"Design", value:40},
-  	{skill:"SQL", value:50}
+    {skill:"PHP", value:5},
+    {skill:"CSS", value:9},
+    {skill:"HTML", value:7},
+    {skill:"JS", value:6},
+    {skill:"Design", value:4},
+  	{skill:"SQL", value:5}
   ];
 
 //loop through the data object
   data.forEach(function(d) {
     d.num = +d.value;
     d.skill = d.skill;
-    console.log(d.value);
   });
 
 //specify the domains of the x and y scales
   xScale.domain(data.map(function(d) { return d.skill; }));
-  yScale.domain([0, d3.max(data, function(d) { return d.value; })]);
+  yScale.domain([0, d3.max(data, function(d) { return 10; })]);
 
 //draw the bars
   svg.selectAll('rect')
       .data(data)
       .enter()
       .append('rect')
+      .attr('height', 0)
+      .attr('y', height)
+      .transition().duration(2000)
+      .delay(100)
       .attr ({
         'x': function (d) { return xScale(d.skill); },
         'y': function (d) { return yScale(d.num); },
         'width': xScale.rangeBand(),
         'height': function (d) { return height - yScale(d.num) }
       })
+      .style('fill', function(d,i) { return 'rgb( 200, 15, ' + ((i * 20) + 40) + ')' })
+      // .style('stroke', 'white')
+      .style('stroke-width', '1');
+
+//label the bars
+svg.selectAll('text')
+.data(data)
+.enter()
+.append('text')
+.text(function (d) { return d.num })
+.attr('x', function (d) { return xScale(d.skill) + xScale.rangeBand()/2; })
+.attr('y', function(d) { return yScale(d.num) + 25; })
+.style({'font-family':'Century Gothic', 'font-size':'18px', 'fill':'white', 'text-anchor':'middle'});
+
+//draw the x Axis
+svg.append('g')
+    .attr('class', 'x axis')
+    .attr('transform', 'translate(0,' + height + ')')
+    .style({'font-family':'Century Gothic', 'font-size':'12px', 'fill':'pink'})
+    .call(xAxis);
+
+//draw the y Axis
+svg.append('g')
+    .attr('class', 'y axis')
+    .call(yAxis)
+    .style({'font-family':'Century Gothic', 'font-size':'12px', 'fill':'white'});
+
+});
 
 // VOICE CONTROL
-if (annyang) {
-
-	  var commands = {
-	    'down': function(){
-        $.fn.fullpage.moveSectionDown();
-      },
-
-			'up': function(){
-        $.fn.fullpage.moveSectionUp();
-      },
-
-      'right': function(){
-        $.fn.fullpage.moveSlideRight();
-      },
-
-      'left': function(){
-        $.fn.fullpage.moveSlideLeft();
-      }
-
-	  };
-
-	  // Add our commands to annyang
-	  annyang.addCommands(commands);
-
-	  // Start listening.
-	  annyang.start();
-}
-
-
-
-
-
-
-// document.keydown = function(e){
-//   switch(e.which) {
-//     case 37:
+// if (annyang) {
 //
-//     break;
-//     case 38:
+// 	  var commands = {
+// 	    'down': function(){
+//         $.fn.fullpage.moveSectionDown();
+//         console.log('okayyyy');
+//       },
 //
-//     break;
-//     case 39:
+// 			'up': function(){
+//         $.fn.fullpage.moveSectionUp();
+//       },
 //
-//     break;
-//     case 40:
+//       'right': function(){
+//         $.fn.fullpage.moveSlideRight();
+//       },
 //
-//     break;
-//     default: return;
-//   }
-//   e.preventDefault();
-// };
-
-
-
+//       'left': function(){
+//         $.fn.fullpage.moveSlideLeft();
+//       }
+//
+// 	  };
+//
+// 	  // Add our commands to annyang
+// 	  annyang.addCommands(commands);
+//
+// 	  // Start listening.
+// 	  annyang.start();
+// }
 
 
 

@@ -1,4 +1,9 @@
 @font-face {font-family: Helvetica; src: url('../../fonts/HelveticaNeueLTStd-UltLt.otf');}
-$font-stack: Helvetica, Century Gothic, Arial;
+// @font-face {font-family: clear; src: url('../../fonts/Lato-Hairline.ttf');}
+
+$font-stack: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+
+// $p: clear;
+
 
 $peach: #F34335;

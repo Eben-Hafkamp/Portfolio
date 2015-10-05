@@ -2,9 +2,36 @@
     display: flex;
     flex-direction: column;
     z-index: -2000;
-    background-image: url('../../img/space-repeating1.png');
-    // background:-webkit-gradient(linear, left top, right bottom, color-stop(0%,#1e5799), color-stop(100%,#7db9e8));
+    background:-webkit-gradient(linear, left top, right bottom, color-stop(0%,#1e5799), color-stop(100%,#7db9e8));
 
+    .fp-tableCell {display: flex; flex-direction: column;}
+
+    .img-stack {
+    // transform: rotateY( 40deg );
+    transform: rotate(350deg);
+  }
+    .index-wrap {
+      display: flex;
+      flex-direction: row;
+      .in-wrap {
+        outline: pink solid thin;
+        flex: 1 0 5%;
+        display: flex;
+        div {
+          width: 5em;
+          height: 3em;
+          margin-right: 1em;
+          border-right: thin solid white;
+        }
+      }
+      .img-stack {
+        flex: 1 0 20%;
+        height:20em;
+        background-image: url(../../img/cyanfox-flat.png);
+        background-size: cover;
+      }
+      outline: red solid thin;
+    }
     .container {
         width: 8em;
         position: relative;
@@ -112,10 +139,15 @@
     .mouse {
       width: 2em;
       height: 3em;
-      margin: 5em auto;
+      position: absolute;
+      top:10em;
+      left: 0;
+      right: 0;
+      margin-right: auto;
+      margin-left: auto;
       border: #e6e6e6 thin solid;
       border-radius: 300px;
-        display: none;
+      display: none;
     }
 
     .mouse-wheel {

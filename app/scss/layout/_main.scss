@@ -1,3 +1,5 @@
+@font-face {font-family: sofia; src:url(../../fonts/Sofia-Regular.otf);}
+
 main {
     display: flex;
     flex-direction: column;
@@ -14,6 +16,7 @@ main {
 h1 {
   font-size:1.2em;
   font-family:$font-stack;
+  font-weight: 100;
   color: white;
 }
 
@@ -21,6 +24,7 @@ p {
   margin-bottom: 1.5em;
   padding:2em 2em;
   font-family:$font-stack;
+  font-weight: lighter;
   font-size: .8em;
   letter-spacing: .1em;
   line-height: 1.6em;

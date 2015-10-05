@@ -4,12 +4,12 @@
     <link rel="stylesheet" href="css/jquery.fullPage.css">
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="slickDir/slick/slick.css">
-    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css" rel="stylesheet"/> -->
+    <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.0.0/annyang.min.js"></script> -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="slickDir/slick/slick-theme.css">
-    <link href='http://fonts.googleapis.com/css?family=Sofia' rel='stylesheet' type='text/css'>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
+    <script src="js/jquery-1.11.3.min.js"></script>
+
     <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
     <title>EH | Portfolio</title>
 </head>
@@ -68,9 +68,15 @@
                 </div>
                 <p class="about">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                  in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                  Ut enim ad minim veniam.
                 </p>
+                <div class="index-wrap">
+                  <div class="in-wrap">
+                    <div class="in-contact"></div><span>Contact</span>
+                    <div class="in-about"></div><span>Available</span>
+                  </div>
+                  <div class="img-stack"></div>
+                </div>
                <div class="splash"></div>
             </div>
             <div class="section" id="work">
@@ -188,7 +194,8 @@
                    <img src="img/icon-adobe.png" height="40">
                  </div>
                  <a href="#three/1">
-                   <button>View Skills Graph</button>
+                   <!-- <input id="jaz" name="updateBtn" type="button" value="Show Skill Graph"> -->
+                   <button id="run">View Skills Graph</button>
                  </a>
                  <div id="Animation-front">
                   <span class="ima">I'm a</span>
@@ -203,7 +210,7 @@
                 </div>
               </div>
               <div class="slide">
-                <h1>Hello</h1>
+                <h1>Skills Graph</h1>
                 <svg id="skillGraph"></svg>
                 <a href="#three">
                   <button>&#10092; Back</button>
@@ -224,7 +231,7 @@
 
                   <div class="me-links">
                     <div class="avatar">
-                        <input type="text" id="bla"">
+
                     </div>
                     <div class="social-icons">
                       <img src="img/social-fb.png">
@@ -246,6 +253,6 @@
 <script src="slickDir/slick/slick.min.js"></script>
 <script src="js/jquery.easings.min.js"></script>
 <script src="js/jquery.fullPage.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.0.0/annyang.min.js"></script>
+<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 </body>
 </html>

@@ -45,7 +45,15 @@
 
   svg {
     margin: 3em auto;
-    background: whitesmoke;
+    background: rgba(0,0,0,0);
+  }
+
+  .axis line,
+  .axis path,
+  {
+    fill:none;
+    stroke:white;
+    shape-rendering: crispEdges;
   }
 
   #Animation-front{
