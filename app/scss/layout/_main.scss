@@ -6,6 +6,12 @@ main {
     z-index: -2000;
 }
 
+.hide {display: none;}
+
+.show {display: flex;}
+
+.fadeIn {display: flex;}
+
 .fp-tableCell {z-index: -2000;}
 
 #fp-nav ul li a span, .fp-slidesNav ul li a span {

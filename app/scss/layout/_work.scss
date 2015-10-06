@@ -162,14 +162,17 @@
       .slide-logo img {height:22px;}
 
       .slick-next {
-        padding-left:1em;
+        right:-60px;
         background-image: url(../../img/arrow-right-thin.png);
         background-size: cover;
       }
       .slick-prev {
-        padding-right:1em;
+        left:-60px;
         background-image: url(../../img/arrow-left-thin.png);
         background-size: cover;
+      }
+      .slick-slider {
+        .slick-arrow {padding:0 2em;}
       }
     }
 

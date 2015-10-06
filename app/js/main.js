@@ -87,6 +87,12 @@ setTimeout(function(){
     $('.container').removeClass('hide');
 }, 1000);
 
+// ---------------- INDEX CONTENT INTRO
+
+setTimeout(function(){
+    $('.index-wrap').removeClass('hide').addClass('animated fadeIn');
+},3500);
+
 // ---------------- D3 SKILLS GRAPH
 
 $('#run').on('click', function() {
@@ -172,7 +178,7 @@ svg.selectAll('text')
 svg.append('g')
     .attr('class', 'x axis')
     .attr('transform', 'translate(0,' + height + ')')
-    .style({'font-family':'Century Gothic', 'font-size':'12px', 'fill':'pink'})
+    .style({'font-family':'Century Gothic', 'font-size':'1em', 'fill':'red', 'font-weight':'bold'})
     .call(xAxis);
 
 //draw the y Axis

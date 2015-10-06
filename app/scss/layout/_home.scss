@@ -11,7 +11,7 @@
       height: 100vh;
       width: 100vw;
       background-image: url("../../img/home-bg.jpg");
-      background-position: 50% 60%;
+      background-position: 18% 60%;
       -webkit-filter: brightness(0.4);
       filter: brightness(.4);
     }
@@ -20,32 +20,46 @@
 
     .index-wrap {
       height: 40em;
-      display: flex;
-      flex-direction: row;
-      margin-top: 2em;
-      outline: green thin solid;
+      flex-direction: column;
       .in-wrap {
-        // outline: pink solid thin;
         flex: 1 0 5%;
         display: flex;
         flex-direction: column;
         .icon-text {
           display: flex;
-          div {
-            width: 5em;
-            height: 3em;
-            margin-right: 1em;
-            line-height: 3em;
-            border-right: thin solid white;
-            img {}
+          flex-direction: column;
+          justify-content: space-around;
+          height: 7em;
+          max-width: 3em;
+          margin-top: 1em;
+          margin-left: 1em;
+          .flex-wrap {
+            display: flex;
+            div {
+              flex: 1 0 20%;
+              min-width: 3em;
+              max-width: 3em;
+              height: 2em;
+              text-align: center;
+              img {padding: .5em 0 0 0; height:20px;}
+            }
+            p {
+              position: absolute;
+              margin-top: -1.4em;
+              span {display: none;}
+            }
           }
+          .flex-wrap:first-child {border-bottom: thin solid white; padding-bottom: 1em;}
         }
       }
       .img-stacked {
-        // height: auto;
-        flex:1 0 50%;
+        flex:1 0 30%;
+        min-width: 150%;
+        background-image: url("../../img/cyanfox-flat.png");
+        background-size: contain;
+        background-position: 70% 10%;
+        background-repeat: no-repeat;
         transform: rotate(350deg);
-        // outline: pink solid thin;
       }
     }
     .container {
@@ -53,7 +67,6 @@
         width: 8em;
         position: relative;
         margin:7em auto;
-        // box-shadow: 0px 0px 113px 51px rgba(0,0,0,0.75);
 
         .move-logo {
             position: absolute;
@@ -74,8 +87,6 @@
             transform-origin: 50% 50%;
             margin: auto;
         }
-
-        .hide {display: hide;}
 
         @keyframes expand {
             0% {
@@ -190,13 +201,59 @@
       90% {margin: .8em auto;}
       100% {margin: .5em auto;}
     }
-
-//    .hide-mouse {display: none;}
-    .show {display: block;}
 }
+
+//iPhone 4 and 5
+@media only screen and (min-device-width : 20em) and (max-device-width : 21em) and (orientation : portrait) and (-webkit-min-device-pixel-ratio : 2) {
+  #home {
+    .mouse {display: none;}
+    .index-wrap {
+      height: 35em;
+      .img-stacked {background-position: 0% 30%;}
+      .in-wrap {margin-top: -3em;}
+    }
+  }
+};
 
 @include respond-to(large-desktop) {
   #home {
+    .index-wrap {
+      height: 45em;
+      flex-direction: row;
+      margin-top: 2em;
+      .in-wrap {
+        padding-top: 15em;
+        .icon-text {
+          flex-direction: row;
+          justify-content: space-between;
+          height: 3em;
+          max-width: 40em;
+          margin-top: 20em;
+          margin-left: 0;
+          padding-left: 3em;
+          .flex-wrap {
+            div {
+              height: 3em;
+              margin-right: 1em;
+              border-right: thin solid white;
+              img {height: 30px; padding: .5em 2em 0 0; line-height: 3em;}
+            }
+            p {
+              position: relative;
+              line-height: 3em;
+              margin-top: 0;
+              padding: 0 0;
+              span {display: block; color: white; font-family:$font-stack; font-size: .7em; letter-spacing: .15em;}
+            }
+          }
+          .flex-wrap:first-child {border-bottom: 0;}
+        }
+      }
+      .img-stacked {
+        min-width: 0%;
+        background-position: 120% 100%;
+      }
+    }
     .container {
       width: 9em;
       position: relative;
@@ -304,15 +361,3 @@
     }
   }
 };
-
-//.splash {
-//    display: flex;
-//    width: 100vw;
-//    height: 100vh;
-//    position: absolute;
-//    top: 0;
-//    left: 0;
-//    background-image: url(../../img/triangulation.png);
-//    background-size: cover;
-//    z-index: -1000;
-//}
