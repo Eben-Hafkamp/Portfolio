@@ -1,0 +1,32 @@
+.d3-heading {
+  font-weight: normal;
+  font-family: "Century Gothic", "Arial", serif;
+  white-space:nowrap;
+  font-size: 2em;
+  background: -webkit-linear-gradient(top, rgba(255,0,132,1) 0%, rgba(94,63,81,1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+svg {
+  margin: 3em auto;
+  background: rgba(0,0,0,0);
+}
+
+.axis line,
+.axis path,
+{
+  fill:none;
+  stroke:white;
+  shape-rendering: crispEdges;
+}
+
+.graph-bars {
+  // outline: white thin solid;
+  border-radius: 1em;
+  box-shadow: 29px 32px 62px -40px rgba(0,0,0,0.75);
+}
+
+.x-axis {
+  padding: 2em;
+}

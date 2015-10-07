@@ -43,19 +43,6 @@
     cursor: pointer;
   }
 
-  svg {
-    margin: 3em auto;
-    background: rgba(0,0,0,0);
-  }
-
-  .axis line,
-  .axis path,
-  {
-    fill:none;
-    stroke:white;
-    shape-rendering: crispEdges;
-  }
-
   #Animation-front{
     // outline: 1px red solid;
     display: none;

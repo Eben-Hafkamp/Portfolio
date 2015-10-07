@@ -98,7 +98,7 @@ setTimeout(function(){
 $('#run').on('click', function() {
 
 // mbostock margin convention
-var margin = { top: 20, right:10, bottom:20, left: 40 },
+var margin = { top: 20, right:10, bottom:40, left: 40 },
     width = 1000 - margin.right - margin.left,
     height = 500 - margin.top - margin.bottom;
 
@@ -107,12 +107,15 @@ var svg = d3.select('#skillGraph')
     .attr ({
       "width" : width + margin.right + margin.left,
       "height" : height + margin.top + margin.bottom
+      // "width" : '80%',
+      // "height" : '50%'
     })
     .append('g')
       .attr("transform", "translate(" + margin.left + ',' + margin.right + ')');
 
+//width of bars
 var xScale = d3.scale.ordinal()
-    .rangeRoundBands([0,width], 0.4, 0.4);
+    .rangeRoundBands([0,width], 0.6, 0.6);
 
 var yScale = d3.scale.linear()
     .range([height, 0]);
@@ -124,7 +127,6 @@ var xAxis = d3.svg.axis()
 var yAxis = d3.svg.axis()
     .scale(yScale)
     .orient("left");
-
 
 var data = [
     {skill:"PHP", value:5},
@@ -150,6 +152,7 @@ var data = [
       .data(data)
       .enter()
       .append('rect')
+      .classed('graph-bars', true)
       .attr('height', 0)
       .attr('y', height)
       .transition().duration(2000)
@@ -178,8 +181,10 @@ svg.selectAll('text')
 svg.append('g')
     .attr('class', 'x axis')
     .attr('transform', 'translate(0,' + height + ')')
-    .style({'font-family':'Century Gothic', 'font-size':'1em', 'fill':'red', 'font-weight':'bold'})
-    .call(xAxis);
+    .style({'font-family':'Century Gothic', 'font-size':'1em', 'fill':'white', 'font-weight':'normal'})
+    .call(xAxis)
+    .selectAll('text')
+    .attr('dy', '1.5em');
 
 //draw the y Axis
 svg.append('g')
