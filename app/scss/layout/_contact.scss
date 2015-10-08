@@ -3,8 +3,7 @@
 }
 
 #contact {
-  // background: linear-gradient(45deg, rgba(230,200,156,1) 0%, rgba(182,141,76,1) 100%);
-  background: linear-gradient(135deg, rgba(224,185,130,1) 0%, rgba(182,141,76,1) 100%);
+  background: linear-gradient(45deg, rgba(116,207,192,1) 0%, rgba(116,207,192,1) 17%, rgba(73,165,191,1) 100%);
   text-align: center;
   padding-top: 4em;
 
@@ -14,19 +13,19 @@
 
   h1 {
     margin: 0 auto 1em;
-    color: #e6c89c;
+    color: #b9ecfa;
     font-family: sofia, cursive;
     font-size: 2em;
     font-weight: bold;
   }
 
   a {
-    color: #435160;
+    // color: #435160;
+    // color: #d14767;
     text-decoration: none;
   }
 
   .message {
-    // outline: thin solid green;
     width: 95vw;
     margin: 1em auto;
     display: flex;
@@ -38,28 +37,28 @@
      padding: 20px 0px;
      background: transparent;
      border: 0;
-     border-bottom: 1px solid #e6c89c;
+     border-bottom: 1px solid #b9ecfa;
      outline: none;
-     color: #e6c89c;
+     color: #b9ecfa;
      font-size: 1em;
      resize: none;
   }
-  textarea:focus { border-bottom: 1px solid #88ace1; }
+  textarea:focus { border-bottom: 1px solid #04db9b; }
 
   input[type="text"] {
       padding: .6em 0;
       background: transparent;
       border: 0;
-      border-bottom: 1px solid #e6c89c;
+      border-bottom: 1px solid #b9ecfa;
       outline: none;
-      color: #e6c89c;
+      color: #b9ecfa;
       font-size: 1em;
   }
-  input[type="text"]:focus { border-bottom: 1px solid #88ace1; }
+  input[type="text"]:focus { border-bottom: 1px solid #04db9b; }
 
   input[type="submit"] {
     margin-top: 1em;
-    background: #88ace1;
+    background: #025368;
     border: 0;
     height: 40px;
     border-radius: 3px;
@@ -68,13 +67,19 @@
     cursor: pointer;
     transition: background .3s ease-in-out;
       &:hover {
-        background: #e188ac;
+        background: #04db9b;
       }
   }
 
   ::-webkit-input-placeholder{
-    color: #e6c89c;
+    color: #b9ecfa;
     font-size: 12px;
+  }
+
+  [placeholder]:focus::-webkit-input-placeholder {
+    color: #6cfcd1;
+    transition: opacity 0.5s 0.5s ease;
+    opacity: 0;
   }
 
   .me-links {
@@ -99,7 +104,6 @@
         height:1.5em;
         flex:1 0 1;
       }
-      img:nth-child(-n+3){ box-shadow: inset 0 0 8px #000000; }
     }
 
   }
@@ -130,7 +134,7 @@
 };
 
 @include respond-to(large-desktop) {
-  #contact p { display: block; margin-top: 7em; color: #e6c89c; }
+  #contact p { display: block; margin-top: 7em; color: white; }
 };
 
 // @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 2/3) and (orientation:portrait)

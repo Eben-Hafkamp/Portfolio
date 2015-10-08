@@ -25,6 +25,8 @@
         flex: 1 0 5%;
         display: flex;
         flex-direction: column;
+        h2 {text-align: center; line-height: 2em; padding: 3em; font-size: .7em;}
+        h2:nth-child(3) {display: none;}
         .icon-text {
           display: flex;
           flex-direction: column;
@@ -222,13 +224,22 @@
       flex-direction: row;
       margin-top: 2em;
       .in-wrap {
-        padding-top: 15em;
+        padding-top: 7em;
+        // outline:pink solid thin;
+        h2:nth-child(2) {display: none;}
+        h2:nth-child(3) {
+          display: block;
+          margin-left: 4em; 
+          padding: 1em;
+          text-align: left;
+          line-height: 3em;
+        }
         .icon-text {
           flex-direction: row;
           justify-content: space-between;
           height: 3em;
           max-width: 40em;
-          margin-top: 20em;
+          margin-top: 24em;
           margin-left: 0;
           padding-left: 3em;
           .flex-wrap {

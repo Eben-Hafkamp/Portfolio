@@ -32,36 +32,36 @@ gulp.task('scripts', function() {
 // Compass / SASS Tasks
 ////////////////////////////////////////////////////////////
 
- // gulp.task('compass', function(){
- //     gulp.src('app/scss/style.scss')
- //         .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
- //         .pipe(compass({
- //             config_file: './config.rb',
- //             css: 'app/css',
- //             sass: 'app/scss',
- //             require: ['susy']
- //         }))
- //         .pipe(autoprefixer('last 2 versions'))
- //         .pipe(csslint())
- //         .pipe(csslint.reporter())
- //         .pipe(sourcemaps.write())
- //     .pipe(gulp.dest('app/css/'))
- //     .pipe(reload({stream: true}));
- // });
+ gulp.task('compass', function(){
+     gulp.src('app/scss/style.scss')
+         .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
+         .pipe(compass({
+             config_file: './config.rb',
+             css: 'app/css',
+             sass: 'app/scss',
+             require: ['susy']
+         }))
+         .pipe(autoprefixer('last 2 versions'))
+         .pipe(csslint())
+         .pipe(csslint.reporter())
+         .pipe(sourcemaps.write())
+     .pipe(gulp.dest('app/css/'))
+     .pipe(reload({stream: true}));
+ });
 
 
-gulp.task('compass', function() {
-  gulp.src('/app/scss/*.scss')
-      .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
-      .pipe(compass({
-          css: 'app/css',
-          sass: 'app/scss',
-          image: 'app/img'
-      }))
-      .pipe(autoprefixer('last 2 versions'))
-  .pipe(gulp.dest('app/css'))
-  .pipe(reload({stream: true}));;
-});
+// gulp.task('compass', function() {
+//   gulp.src('/app/scss/*.scss')
+//       .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
+//       .pipe(compass({
+//           css: 'app/css',
+//           sass: 'app/scss',
+//           image: 'app/img'
+//       }))
+//       .pipe(autoprefixer('last 2 versions'))
+//   .pipe(gulp.dest('app/css'))
+//   .pipe(reload({stream: true}));;
+// });
 
 
 // /////////////////////////////////////////////////////////

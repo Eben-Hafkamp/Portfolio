@@ -1,7 +1,11 @@
 #work {
   height: 100%;
-  padding-top: 1em;
-  background:-webkit-gradient(linear, left top, right bottom, color-stop(0%,#1e5799), color-stop(100%,#7db9e8));
+  padding-top: 4em;
+  background: linear-gradient(135deg, rgba(30,87,153,1) 0%, rgba(125,185,232,1) 100%);
+  // background:-webkit-gradient(linear, left top, right bottom, color-stop(0%,#1e5799), color-stop(100%,#7db9e8));
+  // background: -moz-linear-gradient(-45deg, rgba(30,87,153,1) 0%, rgba(125,185,232,1) 100%);
+  // background: -ms-linear-gradient(-45deg, rgba(30,87,153,1) 0%, rgba(125,185,232,1) 100%);
+  // background: -o-linear-gradient(-45deg, rgba(30,87,153,1) 0%, rgba(125,185,232,1) 100%);
 
   h1 {
     margin: .6em auto 1em;
@@ -20,11 +24,11 @@
     }
   }
   .slider-nav{
-    display: flex;
+    display: none;
     justify-content: space-between;
     width: 98vw;
     line-height: 0em;
-    margin: 3em auto 1em;
+    margin: 3em auto 2em;
     padding: 0 1em;
     text-align: center;
     &:focus {
@@ -153,6 +157,7 @@
     .big-dev-p {display: block; padding:0em 2em 1em;}
 
     .slider-nav {
+      display: flex;
       width: 75vw;
 
       .slide-logo{
@@ -285,11 +290,12 @@
 
         #img-place:nth-child(2) {
           @include fade-img-large-desktop;
+          box-shadow: 0px -25px 72px -39px rgba(0,0,0,0.75);
         }
         #img-place:nth-child(odd) {
           height: 15em;
           width: 25%;
-          // filter: blur(.05em);
+          box-shadow: 0px -49px 89px -58px rgba(0,0,0,0.75);
           filter: brightness(.7);
          }
 
