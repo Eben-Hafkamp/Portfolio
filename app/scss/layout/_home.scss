@@ -43,7 +43,7 @@
               max-width: 3em;
               height: 2em;
               text-align: center;
-              img {padding: .5em 0 0 0; height:20px;}
+              img {padding: .5em 0 0 0; height:1.25em;}
             }
             p {
               position: absolute;
@@ -217,6 +217,10 @@
   }
 };
 
+@include respond-to(tablet) {
+  h2 {text-align: center; line-height: 2em; padding: 3em; font-size: .8em;}
+};
+
 @include respond-to(large-desktop) {
   #home {
     .index-wrap {
@@ -225,21 +229,21 @@
       margin-top: 2em;
       .in-wrap {
         padding-top: 7em;
-        // outline:pink solid thin;
         h2:nth-child(2) {display: none;}
         h2:nth-child(3) {
           display: block;
-          margin-left: 4em; 
+          margin-left: 4em;
           padding: 1em;
           text-align: left;
           line-height: 3em;
+          font-size: .8em;
         }
         .icon-text {
           flex-direction: row;
           justify-content: space-between;
           height: 3em;
           max-width: 40em;
-          margin-top: 24em;
+          margin-top: 23em;
           margin-left: 0;
           padding-left: 3em;
           .flex-wrap {

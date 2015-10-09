@@ -15,7 +15,7 @@ $(function() {
         easingcss3: 'ease',
         scrollOverflow: false,
         touchSensitivity: 15,
-        normalScrollElementTouchThreshold: 5
+        normalScrollElementTouchThreshold: 5,
     });
 
 // ---------------- BURGER TOGGLE STATES
